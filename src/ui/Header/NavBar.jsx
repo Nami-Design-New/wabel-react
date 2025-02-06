@@ -57,7 +57,7 @@ export default function NavBar() {
 
       <div className="actions">
         <Link
-          to="assets/wabel.pdf"
+          to="/wabel.pdf"
           download="wabel.pdf"
           className="company_file"
         >

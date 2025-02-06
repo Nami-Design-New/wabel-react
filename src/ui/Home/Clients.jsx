@@ -48,32 +48,32 @@ export default function Clients() {
               <div className="swiper-wrapper">
                 <div className="swiper-slide">
                   <div className="logo">
-                    <img src="assets/images/c1.webp" loading="lazy" alt="" />
+                    <img src="/images/c1.webp" loading="lazy" alt="" />
                   </div>
                 </div>
                 <div className="swiper-slide">
                   <div className="logo">
-                    <img src="assets/images/c2.webp" loading="lazy" alt="" />
+                    <img src="/images/c2.webp" loading="lazy" alt="" />
                   </div>
                 </div>
                 <div className="swiper-slide">
                   <div className="logo">
-                    <img src="assets/images/c4.webp" loading="lazy" alt="" />
+                    <img src="/images/c4.webp" loading="lazy" alt="" />
                   </div>
                 </div>
                 <div className="swiper-slide">
                   <div className="logo">
-                    <img src="assets/images/c5.webp" loading="lazy" alt="" />
+                    <img src="/images/c5.webp" loading="lazy" alt="" />
                   </div>
                 </div>
                 <div className="swiper-slide">
                   <div className="logo">
-                    <img src="assets/images/c6.webp" loading="lazy" alt="" />
+                    <img src="/images/c6.webp" loading="lazy" alt="" />
                   </div>
                 </div>
                 <div className="swiper-slide">
                   <div className="logo">
-                    <img src="assets/images/c7.webp" loading="lazy" alt="" />
+                    <img src="/images/c7.webp" loading="lazy" alt="" />
                   </div>
                 </div>
               </div>
