@@ -1,9 +1,11 @@
-import Aos from "aos";
-import "aos/dist/aos.css";
 import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import Aos from "aos";
+import "aos/dist/aos.css";
+
 export default function HeroSection() {
   const heroImageRef = useRef(null);
+
   useEffect(() => {
     if (heroImageRef.current) {
       const imageRef = heroImageRef.current.querySelector("[data-aos]");
@@ -18,6 +20,7 @@ export default function HeroSection() {
       once: true,
     });
   }, []);
+
   return (
     <section className="hero_section">
       <div className="container">

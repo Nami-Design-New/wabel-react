@@ -6,7 +6,7 @@ main {
 
   .hero_section {
     padding: 40px 0;
-    background: url("../images/header.png");
+    background: url("../images/header2.png");
     background-size: cover;
     background-position: center;
     position: relative;
@@ -213,7 +213,9 @@ main {
       .about_footer {
         display: flex;
         justify-content: space-between;
-        flex-direction: column;
+        @media screen and (max-width: 576px) {
+          flex-direction: column;
+        }
         gap: 16px;
         .r_list {
           display: flex;
