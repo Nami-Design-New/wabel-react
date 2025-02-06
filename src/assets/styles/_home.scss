@@ -968,6 +968,11 @@ main {
           object-fit: cover;
         }
       }
+      .content-text {
+        ol {
+          padding-right: 2rem;
+        }
+      }
     }
     .recent_blogs {
       padding: 0 16px;

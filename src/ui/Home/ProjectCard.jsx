@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 export default function ProjectCard({ project }) {
   return (
-    <Link to="project" className="project_card">
+    <Link to="/project-details" className="project_card">
       <div className="img">
         <div className="link">
           <span>

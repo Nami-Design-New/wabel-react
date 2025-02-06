@@ -21,19 +21,18 @@ export default function Footer() {
           <div className="col-lg-4 col-12 p-2">
             <div className="col_info">
               <h3>الخدمات</h3>
-
               <ul>
                 <li>
-                  <Link to="services"> تصميم وتطوير مواقع الويب </Link>
+                  <Link to="/service-details">تصميم وتطوير مواقع الويب</Link>
                 </li>
                 <li>
-                  <Link to="services"> تطوير تطبيقات الجوال </Link>
+                  <Link to="/service-details">تطوير تطبيقات الجوال</Link>
                 </li>
                 <li>
-                  <Link to="services"> إدارة التطبيقات </Link>
+                  <Link to="/service-details">إدارة التطبيقات</Link>
                 </li>
                 <li>
-                  <Link to="services"> إدارة السوشيال ميديا </Link>
+                  <Link to="/service-details">إدارة السوشيال ميديا</Link>
                 </li>
               </ul>
             </div>
@@ -41,10 +40,9 @@ export default function Footer() {
           <div className="col-lg-4 col-12 p-2">
             <div className="col_info">
               <h3>تواصل معنا</h3>
-
               <ul>
                 <li>
-                  <i className="fa-sharp fa-light fa-location-crosshairs"></i>
+                  <i className="fa-sharp fa-light fa-location-crosshairs"></i>{" "}
                   السعوديه نجد اﻟﺪور اﻟﺮاﺑﻊ .مكتب رقم 26
                 </li>
                 <li>
@@ -53,11 +51,10 @@ export default function Footer() {
                 </li>
                 <li>
                   <i className="fa-sharp fa-light fa-phone"></i>
-                  <a href="tel:966 5555 5555 5555">+9665555555555</a>
+                  <a href="tel:+9665555555555">+9665555555555</a>
                 </li>
                 <li>
-                  <i className="fa-light fa-mailbox"></i>
-                  س.ت : 1009153086
+                  <i className="fa-light fa-mailbox"></i> س.ت : 1009153086
                 </li>
               </ul>
             </div>
@@ -66,16 +63,32 @@ export default function Footer() {
             <div className="copy_rights">
               <p>&copy; جميع الحقوق محفوظة 2023 لدى وبل نجد</p>
               <div className="social_media">
-                <a to="https://www.facebook.com/" target="_blank">
+                <a
+                  href="https://www.facebook.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fa-brands fa-facebook-f"></i>
                 </a>
-                <a to="https://www.linkedin.com/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fa-brands fa-linkedin-in"></i>
                 </a>
-                <a to="https://www.instagram.com/" target="_blank">
+                <a
+                  href="https://www.instagram.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fa-brands fa-instagram"></i>
                 </a>
-                <a to="https://twitter.com/" target="_blank">
+                <a
+                  href="https://twitter.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <i className="fa-brands fa-twitter"></i>
                 </a>
               </div>
@@ -83,6 +96,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      ;
     </footer>
   );
 }

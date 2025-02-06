@@ -1,7 +1,25 @@
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 export default function HeroSection() {
+  const heroImageRef = useRef(null);
+  useEffect(() => {
+    if (heroImageRef.current) {
+      const imageRef = heroImageRef.current.querySelector("[data-aos]");
+      if (imageRef && !imageRef.getAttribute("data-aos-delay")) {
+        imageRef.setAttribute("data-aos-delay", "100");
+      }
+    }
+    Aos.init({
+      offset: 20,
+      delay: 50,
+      duration: 750,
+      once: true,
+    });
+  }, []);
   return (
     <section className="hero_section">
-      <img src="/images/element1.png" alt="ball" className="element1" />
       <div className="container">
         <div className="row">
           <div className="col-lg-6 col-12 p-2">
@@ -17,8 +35,8 @@ export default function HeroSection() {
                 المتخصصة.
               </p>
               <div className="buttons">
-                <a href="contact.html">تواصل معنا</a>
-                <a href="portfolio.html">عرض المشاريع</a>
+                <Link to="/contact">تواصل معنا</Link>
+                <Link to="/portfolio">عرض المشاريع</Link>
               </div>
             </div>
           </div>
@@ -27,34 +45,35 @@ export default function HeroSection() {
               <div className="main-images-area">
                 <div className="img1">
                   <img
-                    src="assets/images/header-img1.png"
+                    ref={heroImageRef}
+                    src="/images/header-img1.png"
                     alt=""
                     data-aos="zoom-in"
                   />
                 </div>
                 <div className="img2">
-                  <img src="assets/images/header-imgbg.png" alt="" />
+                  <img src="/images/header-imgbg.png" alt="" />
                 </div>
                 <div className="icons-area">
                   <img
-                    src="assets/images/sound-icons1.svg"
+                    src="/images/sound-icons1.svg"
                     alt=""
                     className="sound-icons1 aniamtion-key-1"
                   />
                   <img
-                    src="assets/images/lite-icons1.svg"
+                    src="/images/lite-icons1.svg"
                     alt=""
                     className="lite-icons1 aniamtion-key-1"
                   />
                 </div>
                 <div className="auhtor-icons">
                   <img
-                    src="assets/images/elements2.png"
+                    src="/images/elements2.png"
                     alt=""
                     className="elements2"
                   />
                   <img
-                    src="assets/images/elements3.png"
+                    src="/images/elements3.png"
                     alt=""
                     className="elements3"
                   />
