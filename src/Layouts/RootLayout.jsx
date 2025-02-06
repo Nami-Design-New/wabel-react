@@ -7,7 +7,6 @@ export default function RootLayout() {
   const [isSticky, setIsSticky] = useState();
   useEffect(() => {
     const handleScroll = () => {
-      console.log("scroll");
       if (window.scrollY > 118) {
         setIsSticky(true);
       } else {

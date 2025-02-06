@@ -9,7 +9,7 @@ export default function BlogCard({ blog }) {
       <div className="content">
         <h5>{blog.title}</h5>
         <p>{blog.description}</p>
-        <Link to="blog-details">
+        <Link to={`blog-details/${blog.id}`}>
           المزيد
           <i className="fa-regular fa-arrow-left-long"></i>
         </Link>
