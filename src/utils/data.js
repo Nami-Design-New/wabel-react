@@ -1,50 +1,3 @@
-export const services = [
-  {
-    id: 1,
-    title: "تصميم وبرمجة المواقع الإلكترونية",
-    description:
-      "نقدم حلولًا متكاملة لتصميم وتطوير المواقع الإلكترونية، بما في ذلك المتاجر الإلكترونية، المواقع التفاعلية، ولوحات التحكم المتطورة.",
-    image: "/images/s1.jpg",
-    icon: "/images/ser1.svg",
-    link: "services",
-    gradient:
-      "linear-gradient(135deg, rgba(26, 160, 237, 0.966) 0%, rgba(0, 48, 137, 0.881) 100%)",
-  },
-  {
-    id: 2,
-    title: "تطوير تطبيقات الجوال",
-    description:
-      "نطور تطبيقات مبتكرة لأنظمة iOS و Android مع تجربة مستخدم سلسة وتصميم حديث يعزز أداء عملك الرقمي.",
-    image: "/images/s2.jpg",
-    icon: "/images/ser2.svg",
-    link: "services",
-    gradient:
-      "linear-gradient(135deg, rgba(41, 168, 71, 0.635) 0%, rgba(0, 123, 43, 0.839) 100%)",
-  },
-  {
-    id: 3,
-    title: "إدارة التطبيقات",
-    description:
-      "نوفر خدمات صيانة وإدارة التطبيقات لضمان استقرار الأداء، التحديثات المستمرة، وتحسين تجربة المستخدم.",
-    image: "/images/s3.jpg",
-    icon: "/images/ser3.svg",
-    link: "services",
-    gradient:
-      "linear-gradient(135deg, rgba(255, 193, 7, 0.764) 0%, rgba(255, 140, 0, 0.869) 100%)",
-  },
-  {
-    id: 4,
-    title: "إدارة السوشيال ميديا",
-    description:
-      "نساعدك في بناء وإدارة حضورك الرقمي على وسائل التواصل الاجتماعي عبر استراتيجيات تسويقية مبتكرة ومحتوى متميز.",
-    image: "/images/s4.jpg",
-    icon: "/images/ser4.svg",
-    link: "services",
-    gradient:
-      "linear-gradient(135deg, rgba(220, 53, 70, 0.826) 0%, rgba(155, 0, 0, 0.806) 100%)",
-  },
-];
-
 export const projects = [
   {
     id: 1,
@@ -193,4 +146,11 @@ export const clients = [
     id: 7,
     image: "/images/c7.webp",
   },
+];
+
+export const gradiants = [
+  "linear-gradient(135deg, rgba(26, 160, 237, 0.966) 0%, rgba(0, 48, 137, 0.881) 100%)",
+  "linear-gradient(135deg, rgba(41, 168, 71, 0.635) 0%, rgba(0, 123, 43, 0.839) 100%)",
+  "linear-gradient(135deg, rgba(255, 193, 7, 0.764) 0%, rgba(255, 140, 0, 0.869) 100%)",
+  "linear-gradient(135deg, rgba(220, 53, 70, 0.826) 0%, rgba(155, 0, 0, 0.806) 100%)",
 ];

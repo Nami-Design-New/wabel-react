@@ -22,7 +22,7 @@ export const router = createBrowserRouter([
         element: <Portfolio />,
       },
       {
-        path: "service-details",
+        path: "service-details/:id",
         element: <ServiceDetails />,
       },
       {
@@ -30,7 +30,7 @@ export const router = createBrowserRouter([
         element: <BlogDetails />,
       },
       {
-        path: "project-details",
+        path: "project-details/:id",
         element: <ProjectDetails />,
       },
       {

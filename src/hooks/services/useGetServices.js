@@ -1,15 +1,15 @@
 import { useQuery } from "@tanstack/react-query";
-import { getBlogs } from "../../apiServices/apiBlogs";
+import { getServices } from "../../apiServices/apiServices";
 
-export function useGetBlogs() {
+export function useGetServices() {
   const { data, error, isLoading } = useQuery({
-    queryKey: ["blogs"],
-    queryFn: getBlogs,
+    queryKey: ["services"],
+    queryFn: getServices,
     retry: false,
     refetchOnWindowFocus: false,
     refetchOnMount: false,
     refetchOnReconnect: false,
   });
 
-  return { blogs: data, isLoading, error };
+  return { services: data, isLoading, error };
 }

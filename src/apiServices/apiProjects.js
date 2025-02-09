@@ -22,3 +22,13 @@ export async function getCategories() {
   }
 }
 
+export async function getProject(id) {
+  try {
+    const response = await axiosInstance.get(`project_details/${id}`);
+    const data = response.data.data;
+    return data;
+  } catch (err) {
+    console.error("Error fetching project data:", err);
+    return null;
+  }
+}

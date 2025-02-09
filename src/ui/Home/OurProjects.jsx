@@ -1,10 +1,12 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import ProjectCard from "./ProjectCard";
-import { projects } from "../../utils/data";
+import { useGetProjects } from './../../hooks/projects/useGetProjects';
 import { Link } from "react-router-dom";
+import ProjectCard from "./ProjectCard";
 import SectionHeader from "./SectionHeader";
 
 export default function OurProjects() {
+
+  const {projects} = useGetProjects();
   return (
     <section className="best_projects">
       <div className="container">
@@ -34,7 +36,7 @@ export default function OurProjects() {
                 },
               }}
             >
-              {projects.map((project) => (
+              {projects?.map((project) => (
                 <SwiperSlide key={project.id}>
                   <ProjectCard project={project} />
                 </SwiperSlide>

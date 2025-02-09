@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useGetServices } from "../hooks/services/useGetServices";
 
 export default function Footer() {
+  const { services } = useGetServices();
   return (
     <footer>
       <div className="container">
@@ -22,18 +24,13 @@ export default function Footer() {
             <div className="col_info">
               <h3>الخدمات</h3>
               <ul>
-                <li>
-                  <Link to="/service-details">تصميم وتطوير مواقع الويب</Link>
-                </li>
-                <li>
-                  <Link to="/service-details">تطوير تطبيقات الجوال</Link>
-                </li>
-                <li>
-                  <Link to="/service-details">إدارة التطبيقات</Link>
-                </li>
-                <li>
-                  <Link to="/service-details">إدارة السوشيال ميديا</Link>
-                </li>
+                {services?.map((service) => (
+                  <li key={service.id}>
+                    <Link to={`/service-details/${service.id}`}>
+                      {service.title}
+                    </Link>
+                  </li>
+                ))}
               </ul>
             </div>
           </div>

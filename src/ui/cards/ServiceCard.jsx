@@ -1,15 +1,15 @@
 import { Link } from "react-router-dom";
 
-export default function ServiceCard({ service }) {
+export default function ServiceCard({ service, gradient }) {
   return (
     <div
       className="service_card"
       style={{
-        backgroundImage: `${service.gradient}, url(${service.icon})`,
+        backgroundImage: `${gradient}, url(${service.image})`,
       }}
     >
       <div className="icon">
-        <img src={service.image} alt="web" />
+        <img src={service?.icon} alt="web" />
       </div>
       <h3>{service?.title}</h3>
       <p>{service?.description}</p>

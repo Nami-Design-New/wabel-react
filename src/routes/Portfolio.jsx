@@ -1,10 +1,10 @@
-// import ProjectCard from "../ui/Home/ProjectCard";
-// import { useGetProjects } from "../hooks/projects/useGetProjects";
-// import { useGetCategories } from "./../hooks/projects/useGetCategories";
+import ProjectCard from "../ui/Home/ProjectCard";
+import { useGetProjects } from "../hooks/projects/useGetProjects";
+import { useGetCategories } from "./../hooks/projects/useGetCategories";
 
 export default function Portfolio() {
-  // const { projects } = useGetProjects();
-  // const { categories } = useGetCategories();
+  const { projects } = useGetProjects();
+  const { categories } = useGetCategories();
 
   return (
     <section className="portfolio_page">
@@ -27,16 +27,16 @@ export default function Portfolio() {
           <div className="col-12 p-2">
             <div className="filter">
               <button className="active">جميع الاعمال</button>
-              {/* {categories.map((category) => (
-                <button key={category?.id}>{category?.title}</button>
-              ))} */}
+              {categories?.map((category) => (
+                <button key={category?.id}>{category?.name}</button>
+              ))}
             </div>
           </div>
-          {/* {projects.map((project) => (
+          {projects?.map((project) => (
             <div className=" col-lg-4 col-12 p-2" key={project.id}>
               <ProjectCard project={project} />
             </div>
-          ))} */}
+          ))}
         </div>
       </div>
     </section>

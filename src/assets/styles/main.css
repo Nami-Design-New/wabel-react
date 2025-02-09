@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @keyframes fadeInUpSlider {
   0% {
     opacity: 0;
@@ -20,7 +21,7 @@
   }
 }
 :target {
-  scroll-margin-top: 80px;
+  scroll-margin-top: 100px;
 }
 
 .fancybox__container {
@@ -42,7 +43,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4e2fda;
+  background: #6c3c86;
   height: 300px;
 }
 
@@ -61,6 +62,10 @@ body {
   position: relative;
   direction: rtl;
   font-family: "Zain", serif;
+}
+body.en {
+  direction: ltr;
+  font-family: "Outfit", serif;
 }
 
 ul {
@@ -96,7 +101,7 @@ header {
 header .top_bar {
   width: 100%;
   padding: 8px 0;
-  background: #4e2fda;
+  background: #6c3c86;
 }
 @media screen and (max-width: 768px) {
   header .top_bar {
@@ -193,7 +198,7 @@ header nav .nav-links a {
   transition: 0.3s ease-in-out;
 }
 header nav .nav-links a:hover, header nav .nav-links a.active {
-  color: #4e2fda;
+  color: #6c3c86;
 }
 header nav .layer {
   display: none;
@@ -222,7 +227,7 @@ header nav .actions .company_file {
   transition: 0.3s ease-in-out;
 }
 header nav .actions .company_file:hover {
-  background: #4e2fda;
+  background: #6c3c86;
 }
 @media screen and (max-width: 576px) {
   header nav .actions .company_file {
@@ -241,8 +246,8 @@ header nav .actions button {
   transition: 0.3s ease-in-out;
 }
 header nav .actions button:hover {
-  color: #4e2fda;
-  border: 1px solid #4e2fda;
+  color: #6c3c86;
+  border: 1px solid #6c3c86;
 }
 header nav .actions .menu-button {
   display: none;
@@ -309,7 +314,7 @@ footer .col_info h3::after {
   content: "";
   position: absolute;
   height: 3px;
-  background: #4e2fda;
+  background: #6c3c86;
   border-radius: 4px;
   width: 15%;
   bottom: -8px;
@@ -332,7 +337,7 @@ footer .col_info ul li a {
   transition: 0.3s ease-in-out;
 }
 footer .col_info ul li a:hover {
-  color: #4e2fda;
+  color: #6c3c86;
 }
 footer .copy_rights {
   padding: 24px 0;
@@ -487,7 +492,7 @@ main .hero_section .content h6 {
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 40px;
-  background: #4e2fda;
+  background: #6c3c86;
 }
 main .hero_section .content h1 {
   width: min(550px, 100%);
@@ -510,15 +515,15 @@ main .hero_section .content .buttons {
 }
 main .hero_section .content .buttons a {
   padding: 8px 32px;
-  background: #4e2fda;
+  background: #6c3c86;
   color: #fff;
   border: 1px solid transparent;
   border-radius: 40px;
 }
 main .hero_section .content .buttons a:last-child {
-  color: #4e2fda;
+  color: #6c3c86;
   background: none;
-  border-color: #4e2fda;
+  border-color: #6c3c86;
 }
 main .about_us_section {
   padding: 40px 0 60px;
@@ -590,7 +595,7 @@ main .about_us_section .content {
   gap: 8px;
 }
 main .about_us_section .content h6 {
-  color: #4e2fda;
+  color: #6c3c86;
   font-size: 18px;
 }
 main .about_us_section .content h2 {
@@ -628,7 +633,7 @@ main .about_us_section .content .about_footer .r_list ul li {
   font-size: 18px;
 }
 main .about_us_section .content .about_footer .r_list ul li i {
-  color: #4e2fda;
+  color: #6c3c86;
 }
 main .about_us_section .content .about_footer .r_list a {
   width: -moz-fit-content;
@@ -643,7 +648,7 @@ main .about_us_section .content .about_footer .r_list a {
   transition: 0.3s ease-in-out;
 }
 main .about_us_section .content .about_footer .r_list a:hover {
-  background: #4e2fda;
+  background: #6c3c86;
 }
 main .about_us_section .content .about_footer .statistics {
   background: #fafafa;
@@ -660,7 +665,7 @@ main .about_us_section .content .about_footer .statistics ul li:last-child {
 }
 main .about_us_section .content .about_footer .statistics ul li h3 {
   text-align: center;
-  color: #4e2fda;
+  color: #6c3c86;
   font-weight: 600;
   margin-bottom: 4px;
 }
@@ -699,6 +704,10 @@ main .our_services .service_card p {
   color: #fff;
   text-align: start;
   font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow-y: hidden;
 }
 main .our_services .service_card a {
   color: #fff;
@@ -730,7 +739,7 @@ main .best_projects .view_more {
   transition: 0.3s ease-in-out;
 }
 main .best_projects .view_more:hover {
-  background: #4e2fda;
+  background: #6c3c86;
 }
 main .faqs_section {
   padding: 60px 0;
@@ -766,7 +775,7 @@ main .faqs_section .faq_side_content a {
   transition: 0.3s ease-in-out;
 }
 main .faqs_section .faq_side_content a:hover {
-  background: #4e2fda;
+  background: #6c3c86;
 }
 main .faqs_section .accordion {
   display: flex;
@@ -784,7 +793,7 @@ main .faqs_section .accordion .accordion-item {
   box-shadow: rgba(99, 99, 99, 0.074) 0px 2px 8px 0px;
 }
 main .faqs_section .accordion .accordion-item.active {
-  background: #4e2fda;
+  background: #6c3c86;
 }
 main .faqs_section .accordion .accordion-item.active button {
   color: #fff !important;
@@ -846,7 +855,7 @@ main .clients_section h2 {
   color: #231f20;
 }
 main .clients_section h2 span {
-  color: #4e2fda;
+  color: #6c3c86;
 }
 main .clients_section p {
   text-align: center;
@@ -876,7 +885,7 @@ main .contact_page {
 main .contact_page .contact_info span {
   color: #fff;
   padding: 4px 12px;
-  background: #4e2fda;
+  background: #6c3c86;
   border-radius: 40px;
   margin-bottom: 16px;
   display: block;
@@ -908,7 +917,7 @@ main .contact_page .contact_info .blocks .block a {
   transition: 0.3s ease-in-out;
 }
 main .contact_page .contact_info .blocks .block a:hover {
-  color: #4e2fda;
+  color: #6c3c86;
 }
 main .contact_page .contact_info .blocks .block h6 {
   margin-top: 24px;
@@ -953,7 +962,7 @@ main .contact_page button i {
   transform: scale(-1);
 }
 main .contact_page button:hover {
-  background: #4e2fda;
+  background: #6c3c86;
 }
 main .portfolio_page {
   padding: 60px 0;
@@ -962,7 +971,7 @@ main .portfolio_page .portfolio_header {
   width: 100%;
   padding: 24px 48px 0;
   border-radius: 24px;
-  background: #4e2fda;
+  background: #6c3c86;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1033,7 +1042,7 @@ main .about_section .content {
 main .about_section .content h6 {
   width: -moz-fit-content;
   width: fit-content;
-  background: #4e2fda;
+  background: #6c3c86;
   color: #fff;
   padding: 4px 16px;
   border-radius: 24px;
@@ -1057,7 +1066,7 @@ main .about_section .content a {
   border-radius: 24px;
 }
 main .about_section .content a:hover {
-  background: #4e2fda;
+  background: #6c3c86;
   color: #fff;
 }
 main .about_section .imgs {
@@ -1072,7 +1081,7 @@ main .about_section .imgs .success_rate {
   position: absolute;
   bottom: 8px;
   right: 24px;
-  background: #4e2fda;
+  background: #6c3c86;
   width: 150px;
   border-radius: 12px;
   display: flex;
@@ -1224,7 +1233,7 @@ main .service_benifits ul li {
 main .service_benifits ul li::before {
   content: "\f00c";
   font-family: "Font Awesome 6 Pro";
-  color: #4e2fda;
+  color: #6c3c86;
 }
 main .what_we_offer {
   padding: 60px 0;
@@ -1277,8 +1286,17 @@ main .project_details .bordered_bx {
   background: #fafafa;
   margin-bottom: 24px;
 }
+main .project_details .bordered_bx h6 {
+  font-weight: 600;
+  margin-top: 12px;
+}
+main .project_details .bordered_bx h6 i {
+  color: #6c3c86;
+  margin-inline-end: 8px;
+}
 main .project_details .bordered_bx h1 {
-  color: #4e2fda;
+  color: #6c3c86;
+  font-size: 32px;
 }
 main .project_details .bordered_bx .view_project {
   padding: 8px 32px;
@@ -1311,7 +1329,7 @@ main .project_details .bordered_bx h4::before {
   width: 15%;
   height: 2px;
   border-radius: 8px;
-  background: #4e2fda;
+  background: #6c3c86;
 }
 main .project_details .bordered_bx ul {
   display: flex;
@@ -1325,7 +1343,7 @@ main .project_details .bordered_bx ul li {
 main .project_details .bordered_bx ul li::before {
   content: "\f00c";
   font-family: "Font Awesome 6 Pro";
-  color: #4e2fda;
+  color: #6c3c86;
 }
 main .blog_details {
   padding: 2rem 0;
@@ -1337,7 +1355,7 @@ main .blog_details .blog_header {
   background: #fafafa;
   padding: 16px 24px;
   border-radius: 8px 8px 0 0;
-  border-bottom: 1px solid #4e2fda;
+  border-bottom: 1px solid #6c3c86;
 }
 main .blog_details .blog_header .blog_header_actions {
   display: flex;
@@ -1349,7 +1367,7 @@ main .blog_details .blog_header .blog_header_actions .share {
   color: #231f20;
 }
 main .blog_details .blog_header .blog_header_actions .share:hover {
-  color: #4e2fda;
+  color: #6c3c86;
 }
 main .blog_details .blog_header h1 {
   font-size: 1.5rem;
@@ -1399,7 +1417,7 @@ main .blog_details .recent_blogs ul {
 main .blog_details .recent_blogs ul li {
   padding: 6px 0;
   color: #231f20;
-  border-bottom: 1px solid #4e2fda;
+  border-bottom: 1px solid #6c3c86;
 }
 main .blog_details .recent_blogs ul li a h4 {
   color: #231f20;
@@ -1407,7 +1425,7 @@ main .blog_details .recent_blogs ul li a h4 {
   transition: color 0.3s ease;
 }
 main .blog_details .recent_blogs ul li a:hover h4 {
-  color: #4e2fda;
+  color: #6c3c86;
 }
 
 .project_card {
@@ -1573,7 +1591,7 @@ main .blog_details .recent_blogs ul li a:hover h4 {
   margin-top: 30px;
   padding: 32px;
   border-radius: 24px;
-  background: #4e2fda;
+  background: #6c3c86;
   display: flex;
   align-items: center;
   justify-content: center;

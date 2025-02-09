@@ -309,6 +309,10 @@ main {
         color: $white;
         text-align: start;
         font-size: 14px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow-y: hidden;
       }
       a {
         color: $white;
@@ -872,8 +876,17 @@ main {
       border-radius: 16px;
       background: $lightbg;
       margin-bottom: 24px;
+      h6 {
+        font-weight: 600;
+        margin-top: 12px;
+        i {
+          color: $second;
+          margin-inline-end: 8px;
+        }
+      }
       h1 {
         color: $second;
+        font-size: 32px;
       }
       .view_project {
         padding: 8px 32px;

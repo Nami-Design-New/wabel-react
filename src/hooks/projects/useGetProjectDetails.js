@@ -1,17 +1,19 @@
 import { useQuery } from "@tanstack/react-query";
+import { getProject } from "../../apiServices/apiProjects";
 import { useParams } from "react-router-dom";
-import { getBlogsDetails } from "../../apiServices/apiBlogs";
 
-export function useGetBlogsDetails() {
+export function useGetProjectDetails() {
   const { id } = useParams();
   const { data, error, isLoading } = useQuery({
-    queryKey: ["blogs-details", id],
-    queryFn: () => getBlogsDetails(id),
+    queryKey: ["project-details", id],
+    queryFn: () => getProject(id),
+
+    enabled: !!id,
     retry: false,
     refetchOnWindowFocus: false,
     refetchOnMount: false,
     refetchOnReconnect: false,
   });
 
-  return { blogsDetails: data, error, isLoading };
+  return { projectDetails: data, isLoading, error };
 }
