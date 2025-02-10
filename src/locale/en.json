@@ -64,5 +64,6 @@
     "phoneNumber": "Phone Number",
     "message": "Message",
     "messagePlaceHolder": "Tell us anything—complaint, inquiry, or service request...",
-    "send": "Send"
+    "send": "Send",
+    "latestBlogs": "Recent Articles"
 }
