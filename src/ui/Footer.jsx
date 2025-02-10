@@ -1,8 +1,10 @@
 import { Link } from "react-router-dom";
 import { useGetServices } from "../hooks/services/useGetServices";
+import { useTranslation } from "react-i18next";
 
 export default function Footer() {
   const { services } = useGetServices();
+  const { t } = useTranslation();
   return (
     <footer>
       <div className="container">
@@ -12,17 +14,12 @@ export default function Footer() {
               <Link to="/">
                 <img src="/images/logo-h.svg" loading="lazy" alt="وبل نجد" />
               </Link>
-              <p>
-                وبل نجد شركة رائدة في تقديم الحلول المتكاملة والخدمات المبتكرة
-                التي تلبي احتياجات مختلف القطاعات. نحرص على تقديم أعلى مستويات
-                الجودة والتميز، مع التركيز على الإبداع والتطوير المستمر لضمان
-                رضا عملائنا.
-              </p>
+              <p>{t("footerAbout")}</p>
             </div>
           </div>
           <div className="col-lg-4 col-12 p-2">
             <div className="col_info">
-              <h3>الخدمات</h3>
+              <h3>{t("services")}</h3>
               <ul>
                 {services?.map((service) => (
                   <li key={service.id}>
@@ -36,7 +33,7 @@ export default function Footer() {
           </div>
           <div className="col-lg-4 col-12 p-2">
             <div className="col_info">
-              <h3>تواصل معنا</h3>
+              <h3>{t("contact")}</h3>
               <ul>
                 <li>
                   <i className="fa-sharp fa-light fa-location-crosshairs"></i>{" "}
@@ -58,7 +55,10 @@ export default function Footer() {
           </div>
           <div className="col-12">
             <div className="copy_rights">
-              <p>&copy; جميع الحقوق محفوظة 2023 لدى وبل نجد</p>
+              <p>
+                &copy; {new Date().getFullYear()} {t("allRightsReserved")}{" "}
+                {t("forWabelNajd")}
+              </p>
               <div className="social_media">
                 <a
                   href="https://www.facebook.com/"
@@ -93,7 +93,6 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      ;
     </footer>
   );
 }

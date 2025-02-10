@@ -1,12 +1,14 @@
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import { Outlet } from "react-router-dom";
+import { Outlet, useLocation } from "react-router-dom";
 import Header from "../ui/Header";
 import Footer from "../ui/Footer";
 import i18n from "../utils/i18n";
+import AOS from "aos";
 
 export default function RootLayout() {
   const [isSticky, setIsSticky] = useState();
+  const location = useLocation();
   const lang = useSelector((state) => state.language.lang);
 
   useEffect(() => {
@@ -27,6 +29,28 @@ export default function RootLayout() {
     lang === "en" ? body.classList.add("en") : body.classList.remove("en");
     i18n.changeLanguage(lang);
   }, [lang]);
+
+  useEffect(() => {
+    const sections = document.querySelectorAll("section");
+    sections.forEach((section) => {
+      const sectionDivs = section.querySelectorAll("[data-aos]");
+      sectionDivs.forEach((div, index) => {
+        div.setAttribute("data-aos-delay", (index + 1) * 100);
+      });
+    });
+
+    AOS.init({
+      offset: 20,
+      delay: 50,
+      duration: 700,
+      easing: "ease-out-cubic",
+      once: true,
+    });
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => AOS.refresh(), 100);
+  }, [location]);
 
   return (
     <>

@@ -1,25 +1,10 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import Aos from "aos";
-import "aos/dist/aos.css";
 
 export default function HeroSection() {
   const heroImageRef = useRef(null);
-
-  useEffect(() => {
-    if (heroImageRef.current) {
-      const imageRef = heroImageRef.current.querySelector("[data-aos]");
-      if (imageRef && !imageRef.getAttribute("data-aos-delay")) {
-        imageRef.setAttribute("data-aos-delay", "100");
-      }
-    }
-    Aos.init({
-      offset: 20,
-      delay: 50,
-      duration: 750,
-      once: true,
-    });
-  }, []);
+  const { t } = useTranslation();
 
   return (
     <section className="hero_section">
@@ -27,19 +12,12 @@ export default function HeroSection() {
         <div className="row">
           <div className="col-lg-6 col-12 p-2">
             <div className="content">
-              <h6>شركة وبل نجد للتسويق والبرمجه</h6>
-              <h1>
-                قم بترقية علامتك التجارية باستخدام خبراء تحسين محركات البحث
-                والتسويق الرقمي
-              </h1>
-              <p>
-                مرحبًا بكم في وبل نجد حيث نتخصص في إحداث ثورة في تواجدك عبر
-                الإنترنت من خلال حلول تحسين محركات البحث والتسويق الرقمي
-                المتخصصة.
-              </p>
-              <div className="buttons">
-                <Link to="/contact">تواصل معنا</Link>
-                <Link to="/portfolio">عرض المشاريع</Link>
+              <h6 data-aos="fade-up">{t("wabelNajd")}</h6>
+              <h1 data-aos="fade-up">{t("heroTitle")}</h1>
+              <p data-aos="fade-up">{t("heroDescription")}</p>
+              <div className="buttons" data-aos="fade-up">
+                <Link to="/contact">{t("contact")}</Link>
+                <Link to="/portfolio">{t("viewProjects")}</Link>
               </div>
             </div>
           </div>

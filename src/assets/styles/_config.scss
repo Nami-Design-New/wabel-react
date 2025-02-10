@@ -92,16 +92,7 @@ $gray: #777;
 $lightbg: #fafafa;
 $stroke: #f4f4f4;
 
-body {
-  overflow-x: hidden;
-  position: relative;
-  direction: rtl;
-  font-family: "Zain", serif;
-  &.en {
-    direction: ltr;
-    font-family: "Outfit", serif;
-  }
-}
+
 
 ul {
   list-style: none;

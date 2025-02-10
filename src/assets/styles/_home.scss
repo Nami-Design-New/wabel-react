@@ -101,9 +101,10 @@ main {
       justify-content: center;
       gap: 16px;
       h6 {
-        padding: 4px 16px;
+        padding: 8px 16px;
         color: $white;
         width: fit-content;
+        font-size: 14px;
         border-radius: 40px;
         background: $second;
       }
@@ -290,6 +291,8 @@ main {
     p {
       text-align: center;
       color: $gray;
+      width: min(800px, 100%);
+      margin: 0 auto;
     }
     .service_card {
       padding: 48px 32px;
@@ -333,6 +336,8 @@ main {
     p {
       text-align: center;
       color: $gray;
+      margin: 0 auto;
+      width: min(800px, 100%);
     }
     .view_more {
       margin: 16px auto;
@@ -359,6 +364,8 @@ main {
     p {
       text-align: center;
       color: $gray;
+      margin: 0 auto;
+      width: min(800px, 100%);
     }
     .faq_side_content {
       display: flex;
@@ -449,6 +456,8 @@ main {
     p {
       text-align: center;
       color: $gray;
+      width: min(800px, 100%);
+      margin: 0 auto;
     }
   }
 
@@ -465,6 +474,8 @@ main {
     p {
       text-align: center;
       color: $gray;
+      width: min(800px, 100%);
+      margin: 0 auto;
     }
     .logo {
       padding: 10px;

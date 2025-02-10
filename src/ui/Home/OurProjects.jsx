@@ -1,21 +1,21 @@
 import { Swiper, SwiperSlide } from "swiper/react";
-import { useGetProjects } from './../../hooks/projects/useGetProjects';
+import { useGetProjects } from "./../../hooks/projects/useGetProjects";
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import ProjectCard from "./ProjectCard";
 import SectionHeader from "./SectionHeader";
 
 export default function OurProjects() {
+  const { t } = useTranslation();
+  const { projects } = useGetProjects();
 
-  const {projects} = useGetProjects();
   return (
     <section className="best_projects">
       <div className="container">
         <div className="row">
           <SectionHeader
-            title="أصولكم الرقمية لوحة إبداعنا"
-            subTitle="  نؤمن بأن الأفكار هي بداية كل شيء. لذا، نحن نتحمل مسؤولية إنماء
-              وتطوير هذه الأفكار، ونبتكر الحلول الفعالة التي تحولها إلى مشاريع
-              قوية ومبدعة، تغير حياة أصحابها وتحقق تطلعاتهم تحتاج إلى معرفته."
+            title={t("ourProjectTitle")}
+            subTitle={t("ourProjectSubTitle")}
           />
           <div className="col-12 p-2">
             <Swiper
@@ -43,9 +43,9 @@ export default function OurProjects() {
               ))}
             </Swiper>
           </div>
-          <div className="col-12 p-2">
+          <div className="col-12 p-2" data-aos="fade-up">
             <Link to="portfolio" className="view_more">
-              عرض المزيد
+              {t("viewMore")}
             </Link>
           </div>
         </div>

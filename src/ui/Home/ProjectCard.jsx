@@ -2,7 +2,11 @@ import { Link } from "react-router-dom";
 
 export default function ProjectCard({ project }) {
   return (
-    <Link to={`/project-details/${project?.id}`} className="project_card">
+    <Link
+      to={`/project-details/${project?.id}`}
+      className="project_card"
+      data-aos="fade-up"
+    >
       <div className="img">
         <div className="link">
           <span>

@@ -1,8 +1,43 @@
 @import "config";
-@import "header";
-@import "footer";
-@import "home";
-@import "cards";
-@import "services";
 
-
+body {
+  @import "header";
+  @import "footer";
+  @import "home";
+  @import "cards";
+  @import "services";
+  overflow-x: hidden;
+  position: relative;
+  direction: rtl;
+  font-family: "Zain", serif;
+  &.en {
+    direction: ltr;
+    font-family: "Outfit", serif;
+    .blog_card .content a i{
+      transform: scale(-1);
+    }
+    main {
+      .hero_section .content h1 {
+        font-size: 38px;
+      }
+      .our_services .service_card a i {
+        transform: scale(-1);
+      }
+      .about_us_section .content .about_footer .r_list a i {
+        transform: scale(-1);
+      }
+      .faqs_section .accordion .accordion-item .accordion-button::after {
+        margin-left: auto;
+        margin-right: 0;
+      }
+      .project_details .bordered_bx h4::before {
+        right: initial;
+        left: 0;
+      }
+    }
+    footer .col_info h3::after {
+      right: initial;
+      left: 0;
+    }
+  }
+}

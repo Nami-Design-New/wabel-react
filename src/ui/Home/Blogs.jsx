@@ -1,19 +1,21 @@
-import SectionHeader from "./SectionHeader";
 import { Swiper, SwiperSlide } from "swiper/react";
-import BlogCard from "../cards/BlogCard";
+import { useTranslation } from "react-i18next";
 import { useGetBlogs } from "../../hooks/blogs/useGetBlogs";
+import SectionHeader from "./SectionHeader";
+import BlogCard from "../cards/BlogCard";
 import DataLoader from "../DataLoader";
 
 export default function Blogs() {
   const { blogs, isLoading } = useGetBlogs();
+  const { t } = useTranslation();
+
   return (
     <section className="blogs_section" id="blogs">
       <div className="container">
         <div className="row">
           <SectionHeader
-            title="أحدث المقالات والتحديثات التقنية"
-            subTitle="اكتشف آخر الأخبار والمقالات حول التكنولوجيا، تطوير البرمجيات،
-              وتحسين الأداء الرقمي لتبقى دائمًا في المقدمة."
+            title={t("blogsTitle")}
+            subTitle={t("blogsSubTitle")}
           />
 
           <div className="col-12 p-2">
@@ -39,7 +41,7 @@ export default function Blogs() {
                 }}
               >
                 {blogs?.map((blog) => (
-                  <SwiperSlide key={blog.id}>
+                  <SwiperSlide key={blog.id} data-aos="fade-up">
                     <BlogCard blog={blog} />
                   </SwiperSlide>
                 ))}
