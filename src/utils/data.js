@@ -154,3 +154,27 @@ export const gradiants = [
   "linear-gradient(135deg, rgba(255, 193, 7, 0.764) 0%, rgba(255, 140, 0, 0.869) 100%)",
   "linear-gradient(135deg, rgba(220, 53, 70, 0.826) 0%, rgba(155, 0, 0, 0.806) 100%)",
 ];
+
+export const skills = [
+  "/images/partner/Adobe_XD.png",
+  "/images/partner/Android.png",
+  "/images/partner/Apple.png",
+  "/images/partner/bootstrap.png",
+  "/images/partner/CSS3.png",
+  "/images/partner/dart.png",
+  "/images/partner/Figma-logo.svg",
+  "/images/partner/flutter.png",
+  "/images/partner/HTML.png",
+  "/images/partner/illustrator.png",
+  "/images/partner/Java.png",
+  "/images/partner/JavaScript.png",
+  "/images/partner/jquery.png",
+  "/images/partner/Kotlin.png",
+  "/images/partner/laravel.png",
+  "/images/partner/MySQL.png",
+  "/images/partner/Photoshop.png",
+  "/images/partner/PHP.png",
+  "/images/partner/sass.png",
+  "/images/partner/Swift.png",
+  "/images/partner/Vue.png",
+];

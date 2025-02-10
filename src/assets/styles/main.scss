@@ -13,10 +13,16 @@ body {
   &.en {
     direction: ltr;
     font-family: "Outfit", serif;
-    .blog_card .content a i{
+    .blog_card .content a i {
       transform: scale(-1);
     }
+    header nav .nav-links a {
+      font-size: 16px;
+    }
     main {
+      .about_section h5 {
+        font-size: 16px;
+      }
       .hero_section .content h1 {
         font-size: 38px;
       }
@@ -33,6 +39,12 @@ body {
       .project_details .bordered_bx h4::before {
         right: initial;
         left: 0;
+      }
+      .portfolio_page .portfolio_header .text h1 {
+        font-size: 36px;
+      }
+      .about_section .content h1 {
+        font-size: 32px;
       }
     }
     footer .col_info h3::after {

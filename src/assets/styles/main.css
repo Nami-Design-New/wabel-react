@@ -232,7 +232,7 @@ body header nav .actions .company_file:hover {
 body header nav .actions button {
   color: #231f20;
   font-weight: 500;
-  font-size: 1.1rem;
+  font-size: 1rem;
   line-height: normal;
   height: 39.2px;
   width: 39.2px;
@@ -1000,6 +1000,7 @@ body main .portfolio_page .portfolio_header .text h1 {
 body main .portfolio_page .portfolio_header .text p {
   color: #fff;
   margin-bottom: 24px;
+  max-width: 700px;
 }
 @media screen and (max-width: 576px) {
   body main .portfolio_page .portfolio_header .text p {
@@ -1036,7 +1037,7 @@ body main .portfolio_page .filter button:hover {
   color: #fff;
 }
 body main .about_section {
-  padding: 60px 0;
+  padding: 60px 0 0;
 }
 body main .about_section .content {
   display: flex;
@@ -1157,24 +1158,25 @@ body main .about_section .imgs .img:nth-child(2) {
   z-index: 1;
   margin-top: -120px;
 }
-body main .about_section .borderd_box {
+body main .borderd_box {
   background: #fafafa;
+  height: 100%;
   border-radius: 12px;
   padding: 24px;
   border: 1px solid #f4f4f4;
 }
-body main .about_section .borderd_box img {
+body main .borderd_box img {
   margin-bottom: 16px;
 }
-body main .about_section .borderd_box .content {
+body main .borderd_box .content {
   gap: 4px;
 }
-body main .about_section .borderd_box h3 {
+body main .borderd_box h3 {
   color: #231f20;
   font-size: 24px;
   margin: 0;
 }
-body main .about_section .borderd_box p {
+body main .borderd_box p {
   color: #777;
   margin: 0;
 }
@@ -1650,6 +1652,12 @@ body.en {
 body.en .blog_card .content a i {
   transform: scale(-1);
 }
+body.en header nav .nav-links a {
+  font-size: 16px;
+}
+body.en main .about_section h5 {
+  font-size: 16px;
+}
 body.en main .hero_section .content h1 {
   font-size: 38px;
 }
@@ -1666,6 +1674,12 @@ body.en main .faqs_section .accordion .accordion-item .accordion-button::after {
 body.en main .project_details .bordered_bx h4::before {
   right: initial;
   left: 0;
+}
+body.en main .portfolio_page .portfolio_header .text h1 {
+  font-size: 36px;
+}
+body.en main .about_section .content h1 {
+  font-size: 32px;
 }
 body.en footer .col_info h3::after {
   right: initial;

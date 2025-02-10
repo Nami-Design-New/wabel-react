@@ -1,8 +1,10 @@
 import ProjectCard from "../ui/Home/ProjectCard";
 import { useGetProjects } from "../hooks/projects/useGetProjects";
 import { useGetCategories } from "./../hooks/projects/useGetCategories";
+import { useTranslation } from "react-i18next";
 
 export default function Portfolio() {
+  const { t } = useTranslation();
   const { projects } = useGetProjects();
   const { categories } = useGetCategories();
 
@@ -13,11 +15,8 @@ export default function Portfolio() {
           <div className="col-12 p-2">
             <div className="portfolio_header">
               <div className="text">
-                <h1>رحلتنا مع النجاح تبدأ من هنا</h1>
-                <p>
-                  نقدم حلولاً تقنية تفوق التوقعات، حيث ندمج الإبداع مع الابتكار
-                  لنصنع قصص نجاح حقيقية في مختلف القطاعات داخل المملكة وخارجها.
-                </p>
+                <h1>{t("portfolioTitle")}</h1>
+                <p>{t("portfolioSubTitle")}</p>
               </div>
               <div className="img">
                 <img src="/images/contact.png" alt="" />
@@ -26,7 +25,7 @@ export default function Portfolio() {
           </div>
           <div className="col-12 p-2">
             <div className="filter">
-              <button className="active">جميع الاعمال</button>
+              <button className="active">{t("allWorks")}</button>
               {categories?.map((category) => (
                 <button key={category?.id}>{category?.name}</button>
               ))}
