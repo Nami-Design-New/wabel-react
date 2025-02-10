@@ -47,9 +47,9 @@ export default function Footer() {
                   <i className="fa-sharp fa-light fa-phone"></i>
                   <a href="tel:+9665555555555">+9665555555555</a>
                 </li>
-                <li>
+                {/* <li>
                   <i className="fa-light fa-mailbox"></i> س.ت : 1009153086
-                </li>
+                </li> */}
               </ul>
             </div>
           </div>

@@ -1,4 +1,7 @@
+import { useTranslation } from "react-i18next";
+
 export default function ContactUs() {
+  const { t } = useTranslation();
   return (
     <>
       <section className="contact_page">
@@ -6,16 +9,16 @@ export default function ContactUs() {
           <div className="row">
             <div className="col-lg-6 col-12 p-2">
               <div className="contact_info">
-                <span>ابقَ على تواصل معنا</span>
-                <h2>نحن مستعدون دائمًا لمساعدتك والإجابة على أسئلتك</h2>
+                <span>{t("keepInTouch")}</span>
+                <h2>{t("contactTitle")}</h2>
                 <div className="blocks">
                   <div className="block">
-                    <h6>مركز الاتصال</h6>
+                    <h6>{t("callCenter")}</h6>
                     <a href="tel:+966558100108">+966 558 100 108</a>
-                    <a href="tel:+966558100108">+966 558 100 108</a>
+                    {/* <a href="tel:+966558100108">+966 558 100 108</a> */}
                   </div>
                   <div className="block">
-                    <h6>موقعنا</h6>
+                    <h6>{t("ourLocation")}</h6>
                     <a
                       href="https://www.google.com/maps/place/King+Abdullah+Park/@24.6474709,46.7602933,12387m/data=!3m1!1e3!4m6!3m5!1s0x3e2f043b45575437:0xa2bebdcec14359bd!8m2!3d24.6663657!4d46.7371594!16s%2Fg%2F11c76mxsyk?entry=ttu&amp;g_ep=EgoyMDI0MTExMC4wIKXMDSoASAFQAw%3D%3D"
                       target="_blank"
@@ -24,11 +27,11 @@ export default function ContactUs() {
                     </a>
                   </div>
                   <div className="block">
-                    <h6>البريد الإلكتروني</h6>
-                    <a href="mailto:info@mokabat.com">info@mokabat.com</a>
+                    <h6>{t("email")}</h6>
+                    <a href="mailto:info@wabel-najd.com">info@wabel-najd.com</a>
                   </div>
                   <div className="block">
-                    <h6>وسائل التواصل الاجتماعي</h6>
+                    <h6>{t("socialMedia")}</h6>
                     <div className="socials">
                       <a href="https://www.facebook.com/" target="_blank">
                         <i className="fa-brands fa-facebook-f"></i>
@@ -57,16 +60,16 @@ export default function ContactUs() {
             <div className="col-lg-6 col-12 p-2">
               <form>
                 <div className="input_field">
-                  <label htmlFor="name">الاسم كاملا</label>
+                  <label htmlFor="name">{t("fullName")}</label>
                   <input
                     type="text"
                     name="name"
                     id="name"
-                    placeholder="اكتب الاسم"
+                    placeholder={t("enterFullName")}
                   />
                 </div>
                 <div className="input_field">
-                  <label htmlFor="name">البريد الإلكترونى</label>
+                  <label htmlFor="name">{t("email")}</label>
                   <input
                     type="email"
                     name="email"
@@ -76,7 +79,7 @@ export default function ContactUs() {
                 </div>
 
                 <div className="input_field">
-                  <label htmlFor="phone">رقم الهاتف</label>
+                  <label htmlFor="phone">{t("phoneNumber")}</label>
                   <input
                     type="tel"
                     name="phone"
@@ -85,16 +88,16 @@ export default function ContactUs() {
                   />
                 </div>
                 <div className="input_field">
-                  <label htmlFor="message">الرسالة</label>
+                  <label htmlFor="message">{t("message")}</label>
                   <textarea
                     name="message"
                     id="message"
                     rows="4"
-                    placeholder="اخبرنا عن اي شيء شكوه او استفسار او طلب خدمه منا..."
+                    placeholder={t("messagePlaceHolder")}
                   ></textarea>
                 </div>
 
-                <button>ارسال</button>
+                <button>{t("send")}</button>
               </form>
             </div>
           </div>

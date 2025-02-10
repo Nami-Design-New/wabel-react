@@ -12,10 +12,10 @@ export default function TopBar() {
               <i className="fa-light fa-envelope"></i>
               <a href="mailto:info@wabel-najd.com">info@wabel-najd.com</a>
             </li>
-            <li>
+            {/* <li>
               <i className="fa-light fa-flag"></i>
               س.ت : 1009153086
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className="social_media">

@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
 import { useGetProjectDetails } from "./../hooks/projects/useGetProjectDetails";
+import { useTranslation } from "react-i18next";
 
 export default function ProjectDetails() {
+  const { t } = useTranslation();
   const { projectDetails } = useGetProjectDetails();
 
   const handleShare = (e) => {
@@ -31,11 +33,11 @@ export default function ProjectDetails() {
               <span>{projectDetails?.sub_title}</span>
               <div className="d-flex gap-4 flex-wrap">
                 <h6>
-                  <i className="fa-solid fa-user"></i> العميل:{" "}
+                  <i className="fa-solid fa-user"></i> {t("client")}{" "}
                   {projectDetails?.customer_name}
                 </h6>
                 <h6>
-                  <i className="fa-solid fa-calendar"></i> التاريخ:{" "}
+                  <i className="fa-solid fa-calendar"></i> {t("date")}{" "}
                   {projectDetails?.date}
                 </h6>
               </div>
@@ -43,10 +45,12 @@ export default function ProjectDetails() {
               <p>{projectDetails?.sub_description}</p>
               <div className="buttons">
                 <Link to="" className="view_project">
-                  عرض المشروع <i className="fa-light fa-arrow-up-left"></i>
+                  {t("viewProject")}{" "}
+                  <i className="fa-light fa-arrow-up-left"></i>
                 </Link>
                 <Link onClick={handleShare} className="view_project">
-                  مشاركة المشروع <i className="fa-light fa-share-nodes"></i>
+                  {t("shareProject")}{" "}
+                  <i className="fa-light fa-share-nodes"></i>
                 </Link>
               </div>
             </div>
@@ -56,16 +60,15 @@ export default function ProjectDetails() {
           </div>
           <div className="col-lg-4 col-12 p-2">
             <div className="bordered_bx">
-              <h4>مميزات النظام:</h4>
+              <h4>{t("projectFeatures")}</h4>
               <ul>
-                <li>إدارة الحضور والانصراف بدقة.</li>
-                <li>إدارة الرواتب والمكافآت.</li>
-                <li>إعداد تقارير الأداء.</li>
-                <li>سهولة الوصول إلى البيانات من أي مكان.</li>
+                {projectDetails?.features?.map((feature) => (
+                  <li key={feature?.id}>{feature?.title}</li>
+                ))}
               </ul>
             </div>
             <div className="bordered_bx">
-              <h4>التقنيات المستخدمة:</h4>
+              <h4>{t("techUsed")}</h4>
               <ul>
                 {projectDetails?.skills?.map((skill) => (
                   <li key={skill?.id}>{skill?.title}</li>
