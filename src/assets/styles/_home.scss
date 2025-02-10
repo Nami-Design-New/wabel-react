@@ -542,43 +542,6 @@ main {
         }
       }
     }
-
-    form {
-      padding: 24px;
-      border: 1px solid $stroke;
-      border-radius: 16px;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-
-      .input_field {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        input,
-        textarea {
-          padding: 10px 12px;
-          border-radius: 12px;
-          border: 1px solid $stroke;
-        }
-      }
-    }
-    button {
-      width: fit-content;
-      padding: 12px 0;
-      border-radius: 12px;
-      background: $main;
-      color: $white;
-      width: 100%;
-      transition: 0.3s ease-in-out;
-      margin-top: 12px;
-      i {
-        transform: scale(-1);
-      }
-      &:hover {
-        background: $second;
-      }
-    }
   }
 
   .portfolio_page {
@@ -1038,4 +1001,56 @@ main {
       }
     }
   }
+}
+
+form {
+  padding: 24px;
+  border: 1px solid $stroke;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  .form_group {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    @media screen and (max-width: 576px) {
+      flex-direction: column;
+    }
+  }
+  .input_field {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 8px;
+    input,
+    select,
+    textarea {
+      padding: 10px 12px;
+      border-radius: 12px;
+      border: 1px solid $stroke;
+    }
+  }
+  button {
+    width: fit-content;
+    padding: 12px 0;
+    border-radius: 12px;
+    background: $main;
+    color: $white;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    margin-top: 12px;
+    i {
+      transform: scale(-1);
+    }
+    &:hover {
+      background: $second;
+    }
+  }
+}
+
+.request_service_modal form {
+  border: 0;
+  padding: 0;
 }

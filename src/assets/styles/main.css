@@ -81,6 +81,49 @@ textarea {
   padding: 0;
 }
 
+.dropdown-toggle::after {
+  display: none;
+}
+
+.modal-header {
+  border-bottom: 0;
+}
+.modal-header .btn-close {
+  padding: 0 !important;
+  background: none !important;
+  box-shadow: none !important;
+  margin-inline-end: 0 !important;
+  margin-inline-start: auto !important;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  position: relative;
+  opacity: 1;
+}
+.modal-header .btn-close::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Font Awesome 6 Pro";
+  content: "\f00d";
+  font-size: 14px;
+  color: #231f20;
+}
+.modal-header .btn-close:hover {
+  background: #fafafa !important;
+}
+.modal-header h6 {
+  color: #6c3c86;
+  margin-bottom: 0;
+}
+
+.modal-content {
+  background: #fff;
+  border-radius: 24px;
+  overflow: hidden;
+}
+
 body {
   overflow-x: hidden;
   position: relative;
@@ -932,42 +975,6 @@ body main .contact_page .contact_info .blocks .block .socials {
   align-items: center;
   gap: 24px;
 }
-body main .contact_page form {
-  padding: 24px;
-  border: 1px solid #f4f4f4;
-  border-radius: 16px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-body main .contact_page form .input_field {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-}
-body main .contact_page form .input_field input,
-body main .contact_page form .input_field textarea {
-  padding: 10px 12px;
-  border-radius: 12px;
-  border: 1px solid #f4f4f4;
-}
-body main .contact_page button {
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 12px 0;
-  border-radius: 12px;
-  background: #231f20;
-  color: #fff;
-  width: 100%;
-  transition: 0.3s ease-in-out;
-  margin-top: 12px;
-}
-body main .contact_page button i {
-  transform: scale(-1);
-}
-body main .contact_page button:hover {
-  background: #6c3c86;
-}
 body main .portfolio_page {
   padding: 60px 0;
 }
@@ -1433,6 +1440,59 @@ body main .blog_details .recent_blogs ul li a h4 {
 body main .blog_details .recent_blogs ul li a:hover h4 {
   color: #6c3c86;
 }
+body form {
+  padding: 24px;
+  border: 1px solid #f4f4f4;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+body form .form_group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+@media screen and (max-width: 576px) {
+  body form .form_group {
+    flex-direction: column;
+  }
+}
+body form .input_field {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 8px;
+}
+body form .input_field input,
+body form .input_field select,
+body form .input_field textarea {
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #f4f4f4;
+}
+body form button {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 12px 0;
+  border-radius: 12px;
+  background: #231f20;
+  color: #fff;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+  margin-top: 12px;
+}
+body form button i {
+  transform: scale(-1);
+}
+body form button:hover {
+  background: #6c3c86;
+}
+body .request_service_modal form {
+  border: 0;
+  padding: 0;
+}
 body .project_card {
   width: 100%;
   height: 100%;
@@ -1698,4 +1758,21 @@ body.en footer .col_info h3::after {
 
 .map {
   margin-bottom: -8px;
+}
+
+.floating_btn {
+  position: fixed;
+  bottom: 48px;
+  left: 24px;
+  width: 62px;
+  height: 62px;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 10;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.floating_btn img {
+  height: 42px;
 }/*# sourceMappingURL=main.css.map */

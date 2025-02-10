@@ -5,9 +5,11 @@ import Header from "../ui/Header";
 import Footer from "../ui/Footer";
 import i18n from "../utils/i18n";
 import AOS from "aos";
+import RequestServiceModal from "../ui/RequestServiceModal";
 
 export default function RootLayout() {
   const [isSticky, setIsSticky] = useState();
+  const [showModal, setShowModal] = useState(false);
   const location = useLocation();
   const lang = useSelector((state) => state.language.lang);
 
@@ -61,6 +63,10 @@ export default function RootLayout() {
         <Outlet />
       </main>
       <Footer />
+      <button className="floating_btn" onClick={() => setShowModal(true)}>
+        <img src="/images/support.svg" alt="support" />
+      </button>
+      <RequestServiceModal show={showModal} setShow={setShowModal} />
     </>
   );
 }
