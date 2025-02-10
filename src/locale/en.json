@@ -65,5 +65,6 @@
     "message": "Message",
     "messagePlaceHolder": "Tell us anything—complaint, inquiry, or service request...",
     "send": "Send",
-    "latestBlogs": "Recent Articles"
+    "latestBlogs": "Recent Articles",
+    "requestServiceNow": "Request Service Now"
 }

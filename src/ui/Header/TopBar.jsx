@@ -1,4 +1,9 @@
+import { Link } from "react-router-dom";
+import { useGetSettings } from "../../hooks/useGetSettings";
+
 export default function TopBar() {
+  const { settings } = useGetSettings();
+
   return (
     <div className="top_bar">
       <div className="container">
@@ -6,64 +11,51 @@ export default function TopBar() {
           <ul>
             <li>
               <i className="fa-light fa-location-dot"></i>
-              اﻟﺪور اﻟﺮاﺑﻊ . مكتب رقم 26
+              {settings?.address}
             </li>
             <li>
               <i className="fa-light fa-envelope"></i>
-              <a href="mailto:info@wabel-najd.com">info@wabel-najd.com</a>
+              <a href={`mailto:${settings?.email}`}>{settings?.email}</a>
             </li>
-            {/* <li>
-              <i className="fa-light fa-flag"></i>
-              س.ت : 1009153086
-            </li> */}
           </ul>
         </div>
         <div className="social_media">
           <ul>
             <li>
-              <a
-                href="https://www.facebook.com/wabelnajd"
+              <Link
+                to={settings?.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="fa-brands fa-facebook-f"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://www.instagram.com/wabel_najd/"
+              <Link
+                to={settings?.insta}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="fa-brands fa-instagram"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://www.linkedin.com/company/wabel-najd/"
+              <Link
+                to={settings?.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="fa-brands fa-linkedin-in"></i>
-              </a>
+              </Link>
             </li>
             <li>
-              <a
-                href="https://www.behance.net/wabelnajd"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i className="fa-brands fa-behance"></i>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://twitter.com/wabelnajd"
+              <Link
+                to={settings?.twitter}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <i className="fa-brands fa-twitter"></i>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

@@ -4,11 +4,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../../redux/slices/language";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { useGetSettings } from "../../hooks/useGetSettings";
 import i18next from "i18next";
 
 export default function NavBar() {
   const { hash } = useLocation();
   const { t } = useTranslation();
+  const { settings } = useGetSettings();
   const { lang } = useSelector((state) => state.language);
   const queryClient = useQueryClient();
   const dispatch = useDispatch();
@@ -27,6 +29,7 @@ export default function NavBar() {
 
   const handleLang = (newLang) => {
     queryClient.invalidateQueries();
+    queryClient.removeQueries();
     dispatch(setLanguage(newLang));
     i18next.changeLanguage(newLang);
     const bodyElement = document.querySelector("body");
@@ -63,9 +66,14 @@ export default function NavBar() {
       <div className="layer"></div>
 
       <div className="actions">
-        <Link to="/wabel.pdf" download="wabel.pdf" className="company_file">
+        <a
+          href={settings?.pdf}
+          download={settings?.pdf}
+          target="_balnk"
+          className="company_file"
+        >
           {t("companyFile")}
-        </Link>
+        </a>
         <button onClick={() => handleLang(lang === "en" ? "ar" : "en")}>
           {lang === "en" ? "AR" : "EN"}
         </button>

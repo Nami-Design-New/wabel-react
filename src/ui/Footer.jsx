@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import { useGetServices } from "../hooks/services/useGetServices";
 import { useTranslation } from "react-i18next";
+import { useGetSettings } from "../hooks/useGetSettings";
 
 export default function Footer() {
   const { services } = useGetServices();
+  const { settings } = useGetSettings();
   const { t } = useTranslation();
+
   return (
     <footer>
       <div className="container">
@@ -37,19 +40,16 @@ export default function Footer() {
               <ul>
                 <li>
                   <i className="fa-sharp fa-light fa-location-crosshairs"></i>{" "}
-                  السعوديه نجد اﻟﺪور اﻟﺮاﺑﻊ .مكتب رقم 26
+                  {settings?.address}
                 </li>
                 <li>
                   <i className="fa-light fa-envelope"></i>
-                  <a href="mailto:info@wabel-najd.com">info@wabel-najd.com</a>
+                  <a href={`mailto:${settings?.email}`}>{settings?.email}</a>
                 </li>
                 <li>
                   <i className="fa-sharp fa-light fa-phone"></i>
-                  <a href="tel:+9665555555555">+9665555555555</a>
+                  <a href={`tel:${settings?.phone}`}>{settings?.phone}</a>
                 </li>
-                {/* <li>
-                  <i className="fa-light fa-mailbox"></i> س.ت : 1009153086
-                </li> */}
               </ul>
             </div>
           </div>
@@ -60,34 +60,34 @@ export default function Footer() {
                 {t("forWabelNajd")}
               </p>
               <div className="social_media">
-                <a
-                  href="https://www.facebook.com/"
+                <Link
+                  to={settings?.facebook}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <i className="fa-brands fa-facebook-f"></i>
-                </a>
-                <a
-                  href="https://www.linkedin.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <i className="fa-brands fa-linkedin-in"></i>
-                </a>
-                <a
-                  href="https://www.instagram.com/"
+                </Link>
+                <Link
+                  to={settings?.insta}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <i className="fa-brands fa-instagram"></i>
-                </a>
-                <a
-                  href="https://twitter.com/"
+                </Link>
+                <Link
+                  to={settings?.linkedin}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i className="fa-brands fa-linkedin-in"></i>
+                </Link>
+                <Link
+                  to={settings?.twitter}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   <i className="fa-brands fa-twitter"></i>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

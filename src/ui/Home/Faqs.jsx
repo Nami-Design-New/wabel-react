@@ -1,10 +1,12 @@
 import { Link } from "react-router-dom";
-import SectionHeader from "./SectionHeader";
-import { accordionData } from "../../utils/data";
+import { Accordion } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
+import { useGetFaqs } from "../../hooks/useGetFaqs";
+import SectionHeader from "./SectionHeader";
 
 export default function Faqs() {
   const { t } = useTranslation();
+  const { faqs } = useGetFaqs();
 
   return (
     <section className="faqs_section">
@@ -12,36 +14,16 @@ export default function Faqs() {
         <div className="row">
           <SectionHeader title={t("faqTitle")} subTitle={t("faqSubTitle")} />
           <div className="col-lg-6 col-12 p-2">
-            <div className="accordion" id="accordionExample" data-aos="fade-up">
-              {accordionData.map((item, index) => (
-                <div className="accordion-item" key={item.id}>
-                  <h2 className="accordion-header" id={item.heading}>
-                    <button
-                      className={`accordion-button ${
-                        index !== 0 ? "collapsed" : ""
-                      }`}
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target={`#${item.id}`}
-                      aria-expanded={index === 0 ? "true" : "false"}
-                      aria-controls={item.id}
-                    >
-                      {item.question}
-                    </button>
-                  </h2>
-                  <div
-                    id={item.id}
-                    className={`accordion-collapse collapse ${
-                      index === 0 ? "show" : ""
-                    }`}
-                    aria-labelledby={item.heading}
-                    data-bs-parent="#accordionExample"
-                  >
-                    <div className="accordion-body">{item.answer}</div>
-                  </div>
-                </div>
+            <Accordion defaultActiveKey={0} data-aos="fade-up">
+              {faqs?.map((faqItem, index) => (
+                <Accordion.Item eventKey={index} key={faqItem?.id}>
+                  <Accordion.Header as={"h2"}>
+                    {faqItem?.question}
+                  </Accordion.Header>
+                  <Accordion.Body>{faqItem?.answer}</Accordion.Body>
+                </Accordion.Item>
               ))}
-            </div>
+            </Accordion>
           </div>
 
           <div className="col-lg-6 col-12 p-2">

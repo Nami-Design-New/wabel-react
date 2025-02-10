@@ -65,5 +65,6 @@
     "message": "الرسالة",
     "messagePlaceHolder": "اخبرنا عن اي شيء شكوه او استفسار او طلب خدمه منا...",
     "send": "إرسال",
-    "latestBlogs": "المقالات الأخيرة"
+    "latestBlogs": "المقالات الأخيرة",
+    "requestServiceNow": "اطلب الخدمة الآن"
 }

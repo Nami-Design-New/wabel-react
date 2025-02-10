@@ -1,6 +1,8 @@
+import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 export default function ServiceHeroSection() {
+  const { t } = useTranslation();
   return (
     <section className="service_hero_section">
       <div className="container">
@@ -23,7 +25,7 @@ export default function ServiceHeroSection() {
                     تكامل مع أنظمة متعددة لضمان أداء عالي وموثوقية
                   </li>
                 </ul>
-                <Link to="contact">اطلب الخدمة الآن</Link>
+                <Link to="/contact">{t("requestServiceNow")}</Link>
               </div>
             </div>
           </div>
