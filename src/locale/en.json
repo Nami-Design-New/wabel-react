@@ -81,9 +81,15 @@
     "meet": "Online Meeting",
     "booking": "Office Appointment",
     "yes": "Yes",
-    "noe": "No",
-    "isPriceSuitable": "Is Price Suitable?",
-    "why": "Why price is not suitable ?",
-    "successMessage": "Your request has been successfully submitted. You will receive a response as soon as possible.",
-    "service": "Service"
+    "no": "No",
+    "isPriceSuitable": "Is the price suitable?",
+    "why": "Why is the price not suitable?",
+    "sucessMessage": "Your request has been successfully sent. You will receive a response as soon as possible.",
+    "service": "Service",
+    "next": "Next",
+    "priceDesc": "The initial cost will be for",
+    "sar": "SAR",
+    "suitable": "Suitable",
+    "unSuitable": "Unsuitable",
+    "chooseProjectidea": "Choose a project idea"
 }

@@ -721,7 +721,7 @@ body main .about_us_section .content .about_footer .statistics ul li p {
 body main .our_services {
   padding: 60px 0;
   background: #fafafa;
-  background: linear-gradient(180deg, rgba(108, 60, 134, 0.8078431373), rgba(108, 60, 134, 0.8862745098)), url("/public/images/bg-fixed1.jpg");
+  background: linear-gradient(180deg, rgba(108, 60, 134, 0.8078431373), rgba(108, 60, 134, 0.8862745098)), url("/images/bg-fixed1.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -891,7 +891,7 @@ body main .faqs_section .accordion .accordion-item .accordion-body p {
 }
 body main .blogs_section {
   padding: 60px 0;
-  background: linear-gradient(180deg, rgba(108, 60, 134, 0.8078431373), rgba(108, 60, 134, 0.8862745098)), url("/public/images/bg-fixed2.jpg");
+  background: linear-gradient(180deg, rgba(108, 60, 134, 0.8078431373), rgba(108, 60, 134, 0.8862745098)), url("/images/bg-fixed2.jpg");
   background-size: cover;
   background-attachment: fixed;
 }
@@ -1486,7 +1486,8 @@ body form .input_field textarea {
   border-radius: 12px;
   border: 1px solid #f4f4f4;
 }
-body form button {
+body form button,
+body form .btn {
   width: -moz-fit-content;
   width: fit-content;
   padding: 12px 0;
@@ -1497,15 +1498,62 @@ body form button {
   transition: 0.3s ease-in-out;
   margin-top: 12px;
 }
-body form button i {
+body form button i,
+body form .btn i {
   transform: scale(-1);
 }
-body form button:hover {
+body form button:hover,
+body form .btn:hover {
   background: #6c3c86;
+  color: #fff;
 }
 body .request_service_modal form {
   border: 0;
   padding: 0;
+}
+body .request_service_modal form h6 {
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+body .request_service_modal form .title {
+  font-size: 22px;
+  color: #231f20;
+}
+body .request_service_modal form .title span {
+  color: #6c3c86;
+  font-size: 24px;
+  font-weight: 600;
+}
+body .request_service_modal form .ideas {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+body .idea {
+  width: 100%;
+}
+body .idea input {
+  display: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+body .idea input:checked + span {
+  background: #6c3c86;
+  color: #fff;
+}
+body .idea span {
+  padding: 12px;
+  border: 1px solid #f4f4f4;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
 }
 body .project_card {
   width: 100%;

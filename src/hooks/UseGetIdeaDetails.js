@@ -6,10 +6,9 @@ export function UseGetIdeaDetails(id) {
     queryKey: ["idea-details", id],
     queryFn: async () => {
       try {
-        const response = await axiosInstance.post(
-          "get_what_you_need_ideas",
-          id
-        );
+        const response = await axiosInstance.post("get_what_you_need_ideas", {
+          id,
+        });
         const data = response.data.data;
         return data;
       } catch (err) {
@@ -24,5 +23,5 @@ export function UseGetIdeaDetails(id) {
     refetchOnReconnect: false,
   });
 
-  return { ideaDetails: data, isLoading, error };
+  return { ideas: data, isLoading, error };
 }

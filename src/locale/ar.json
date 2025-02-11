@@ -67,7 +67,7 @@
     "send": "إرسال",
     "latestBlogs": "المقالات الأخيرة",
     "requestServiceNow": "اطلب الخدمة الآن",
-    "whatDoYouWant": "إيش تبغى ؟",
+    "whatDoYouWant": "ماذا تحتاج ؟",
     "meetingTime": "موعد الإجتماع",
     "whatsNumber": "رقم الواتساب",
     "whatDoYouNeed": "ماذا تريد؟",
@@ -85,5 +85,11 @@
     "isPriceSuitable": "هل السعر مناسب؟",
     "why": "لماذا السعر غير مناسب",
     "sucessMessage": "تم ارسال طلبك بنجاح سيتم الرد فى اقرب وقت ممكن",
-    "service": "الخدمه"
+    "service": "الخدمه",
+    "next": "التالى",
+    "priceDesc": "ستكون التكلفة المبدأيه ل",
+    "sar": "ر.س",
+    "suitable": "مناسب",
+    "unSuitable":"غير مناسب",
+    "chooseProjectidea": "إختر فكره المشروع "
 }

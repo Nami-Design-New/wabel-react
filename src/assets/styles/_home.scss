@@ -287,7 +287,7 @@ main {
     padding: 60px 0;
     background: $lightbg;
     background: linear-gradient(180deg, #6c3c86ce, #6c3c86e2),
-      url("/public/images/bg-fixed1.jpg");
+      url("/images/bg-fixed1.jpg");
     background-size: cover;
     background-attachment: fixed;
     h2 {
@@ -456,7 +456,7 @@ main {
   .blogs_section {
     padding: 60px 0;
     background: linear-gradient(180deg, #6c3c86ce, #6c3c86e2),
-      url("/public/images/bg-fixed2.jpg");
+      url("/images/bg-fixed2.jpg");
     background-size: cover;
     background-attachment: fixed;
     h2 {
@@ -1042,7 +1042,8 @@ form {
       border: 1px solid $stroke;
     }
   }
-  button {
+  button,
+  .btn {
     width: fit-content;
     padding: 12px 0;
     border-radius: 12px;
@@ -1056,6 +1057,7 @@ form {
     }
     &:hover {
       background: $second;
+      color: $white;
     }
   }
 }
@@ -1063,4 +1065,48 @@ form {
 .request_service_modal form {
   border: 0;
   padding: 0;
+  h6 {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 0;
+    margin-top: 8px;
+  }
+
+  .title {
+    font-size: 22px;
+    color: $main;
+    span {
+      color: $second;
+      font-size: 24px;
+      font-weight: 600;
+    }
+  }
+
+  .ideas {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+}
+
+.idea {
+  width: 100%;
+  input {
+    display: none;
+    appearance: none;
+    &:checked + span {
+      background: #6c3c86;
+      color: $white;
+    }
+  }
+
+  span {
+    padding: 12px;
+    border: 1px solid $stroke;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    width: 100%;
+    @include centerFlex();
+    border-radius: 12px;
+  }
 }
