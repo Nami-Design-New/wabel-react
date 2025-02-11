@@ -155,8 +155,8 @@ export default function RequestServiceModal({ show, setShow }) {
                 value={formData.type}
                 onChange={handleChange}
                 options={[
-                  { value: "public", label: "public" },
-                  { value: "private", label: "private" },
+                  { value: "public", label: t("public") },
+                  { value: "private", label: t("private") },
                 ]}
                 required
               />
@@ -181,7 +181,7 @@ export default function RequestServiceModal({ show, setShow }) {
                 label="chooseProjectidea"
                 type="select"
                 name="idea"
-                value={selectedIdea?.id}
+                value={selectedIdea?.id || ""}
                 onChange={(e) =>
                   setSelectedIdea(
                     ideas.find((idea) => idea.id === +e.target.value)
@@ -282,10 +282,10 @@ export default function RequestServiceModal({ show, setShow }) {
                     value={formData.contact}
                     onChange={handleChange}
                     options={[
-                      { value: "phone", label: "phone" },
-                      { value: "whats", label: "whats" },
-                      { value: "booking", label: "booking" },
-                      { value: "meet", label: "meet" },
+                      { value: "phone", label: t("phone") },
+                      { value: "whats", label: t("whats") },
+                      { value: "booking", label: t("booking") },
+                      { value: "meet", label: t("meet") },
                     ]}
                     required
                   />

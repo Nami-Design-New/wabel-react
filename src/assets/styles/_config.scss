@@ -148,6 +148,13 @@ textarea {
     color: $second;
     margin-bottom: 0;
   }
+  .back-button{
+    min-width: 40px !important;
+    aspect-ratio: 1;
+    border: 1px solid $second;
+    margin-inline-end: 8px;
+    border-radius: 100px;
+  }
 }
 
 .modal-content {

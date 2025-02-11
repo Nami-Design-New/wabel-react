@@ -1040,6 +1040,7 @@ form {
       padding: 10px 12px;
       border-radius: 12px;
       border: 1px solid $stroke;
+      background-color: #fafafa;
     }
   }
   button,
@@ -1106,6 +1107,7 @@ form {
     width: 100%;
     @include centerFlex();
     border-radius: 12px;
+    background-color: #f4f4f4;
   }
 }
 

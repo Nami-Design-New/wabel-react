@@ -117,6 +117,13 @@ textarea {
   color: #6c3c86;
   margin-bottom: 0;
 }
+.modal-header .back-button {
+  min-width: 40px !important;
+  aspect-ratio: 1;
+  border: 1px solid #6c3c86;
+  margin-inline-end: 8px;
+  border-radius: 100px;
+}
 
 .modal-content {
   background: #fff;
@@ -1485,6 +1492,7 @@ body form .input_field textarea {
   padding: 10px 12px;
   border-radius: 12px;
   border: 1px solid #f4f4f4;
+  background-color: #fafafa;
 }
 body form button,
 body form .btn {
@@ -1554,6 +1562,7 @@ body .idea span {
   align-items: center;
   justify-content: center;
   border-radius: 12px;
+  background-color: #f4f4f4;
 }
 body .team_section {
   padding: 60px 0;

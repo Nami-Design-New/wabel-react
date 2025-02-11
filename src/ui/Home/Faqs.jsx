@@ -36,7 +36,7 @@ export default function Faqs() {
               <h4 data-aos="fade-up">{t("haveAnotherQuestion")}</h4>
               <p data-aos="fade-up">{t("haveAnotherQuestionSub")}</p>
               <div data-aos="fade-up">
-                <Link to="contact">{t("contact")}</Link>
+                <Link to="/contact">{t("contact")}</Link>
               </div>
             </div>
           </div>
