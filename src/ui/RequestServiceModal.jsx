@@ -1,14 +1,14 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { useGetWhatYouNeed } from "../hooks/useGetWhatYouNeed";
-import axiosInstance from "../utils/axios";
 import { toast } from "sonner";
+import axiosInstance from "../utils/axios";
+// import { UseGetIdeaDetails } from "../hooks/UseGetIdeaDetails";
 
 export default function RequestServiceModal({ show, setShow }) {
   const { t } = useTranslation();
   const { whatYouNeed } = useGetWhatYouNeed();
-  const formRef = useRef();
   const [loading, setLoading] = useState();
   const [formData, setFormData] = useState({
     name: "",
@@ -23,6 +23,8 @@ export default function RequestServiceModal({ show, setShow }) {
     what_you_need_idea_id: "",
   });
 
+  // const { ideaDetails } = UseGetIdeaDetails(formData.what_you_need_idea_id);
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
@@ -30,6 +32,19 @@ export default function RequestServiceModal({ show, setShow }) {
       const res = await axiosInstance.post("create_order", formData);
       if (res.data.code === 200) {
         toast.success(t("sucessMessage"));
+        setShow(false);
+        setFormData({
+          name: "",
+          phone: "",
+          email: "",
+          whats: "",
+          date_time: "",
+          type: "",
+          status: "yes",
+          why: "",
+          contact: "",
+          what_you_need_idea_id: "",
+        });
       }
     } catch (error) {
       console.log(error);
@@ -45,7 +60,7 @@ export default function RequestServiceModal({ show, setShow }) {
       </Modal.Header>
       <Modal.Body>
         <div className="contact modal-contact request_service_modal">
-          <form onSubmit={handleSubmit} ref={formRef}>
+          <form onSubmit={handleSubmit}>
             <div className="form_group">
               <div className="input_field">
                 <label htmlFor="name">{t("fullName")}</label>
@@ -65,7 +80,7 @@ export default function RequestServiceModal({ show, setShow }) {
               </div>
 
               <div className="input_field">
-                <label htmlFor="name">{t("email")}</label>
+                <label htmlFor="email">{t("email")}</label>
                 <input
                   type="email"
                   name="email"
@@ -169,11 +184,11 @@ export default function RequestServiceModal({ show, setShow }) {
                 <select
                   name="contact"
                   id="contact"
-                  value={formData.type}
+                  value={formData.contact}
                   onChange={(e) =>
                     setFormData((prev) => ({
                       ...prev,
-                      type: e.target.value,
+                      contact: e.target.value,
                     }))
                   }
                 >

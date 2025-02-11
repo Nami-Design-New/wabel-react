@@ -84,5 +84,6 @@
     "noe": "No",
     "isPriceSuitable": "Is Price Suitable?",
     "why": "Why price is not suitable ?",
-    "successMessage": "Your request has been successfully submitted. You will receive a response as soon as possible."
+    "successMessage": "Your request has been successfully submitted. You will receive a response as soon as possible.",
+    "service": "Service"
 }

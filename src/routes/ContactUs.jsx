@@ -1,7 +1,36 @@
+import { useState } from "react";
 import { useTranslation } from "react-i18next";
+import { toast } from "sonner";
+import { useGetServices } from "../hooks/services/useGetServices";
+import axiosInstance from "../utils/axios";
 
 export default function ContactUs() {
+  const { services } = useGetServices();
+  const [loading, setLoading] = useState();
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    type: "",
+    service_id: "",
+  });
   const { t } = useTranslation();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+    try {
+      const res = await axiosInstance.post("send_contact_us", formData);
+      if (res.data.code === 200) {
+        toast.success(t("sucessMessage"));
+      }
+    } catch (error) {
+      console.log(error);
+      toast.error("Some Thing Went Wrong");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <>
       <section className="contact_page">
@@ -58,23 +87,21 @@ export default function ContactUs() {
             </div>
 
             <div className="col-lg-6 col-12 p-2">
-              <form>
+              <form onSubmit={handleSubmit}>
                 <div className="input_field">
                   <label htmlFor="name">{t("fullName")}</label>
                   <input
                     type="text"
                     name="name"
                     id="name"
+                    value={formData.name}
                     placeholder={t("enterFullName")}
-                  />
-                </div>
-                <div className="input_field">
-                  <label htmlFor="name">{t("email")}</label>
-                  <input
-                    type="email"
-                    name="email"
-                    id="email"
-                    placeholder="example@example.com"
+                    onChange={(e) =>
+                      setFormData((prev) => ({
+                        ...prev,
+                        name: e.target.value,
+                      }))
+                    }
                   />
                 </div>
 
@@ -84,20 +111,67 @@ export default function ContactUs() {
                     type="tel"
                     name="phone"
                     id="phone"
+                    value={formData.phone}
                     placeholder="9665555555"
+                    onChange={(e) =>
+                      setFormData((prev) => ({
+                        ...prev,
+                        phone: e.target.value,
+                      }))
+                    }
                   />
                 </div>
+
                 <div className="input_field">
-                  <label htmlFor="message">{t("message")}</label>
-                  <textarea
-                    name="message"
-                    id="message"
-                    rows="4"
-                    placeholder={t("messagePlaceHolder")}
-                  ></textarea>
+                  <label htmlFor="type">{t("contactType")}</label>
+                  <select
+                    name="type"
+                    id="type"
+                    value={formData.type}
+                    onChange={(e) =>
+                      setFormData((prev) => ({
+                        ...prev,
+                        type: e.target.value,
+                      }))
+                    }
+                  >
+                    <option value="">{t("select")}</option>
+                    <option value="phone">{t("phone")}</option>
+                    <option value="whats">{t("whats")}</option>
+                  </select>
                 </div>
 
-                <button>{t("send")}</button>
+                <div className="input_field">
+                  <label htmlFor="service_id">{t("service")}</label>
+                  <select
+                    name="service_id"
+                    id="service_id"
+                    value={formData.service_id}
+                    onChange={(e) =>
+                      setFormData((prev) => ({
+                        ...prev,
+                        service_id: e.target.value,
+                      }))
+                    }
+                  >
+                    <option value="">{t("select")}</option>
+                    {services?.map((opt) => (
+                      <option value={opt?.id} key={opt?.id}>
+                        {opt?.title}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                <button
+                  style={{ opacity: loading ? 0.7 : 1 }}
+                  disabled={loading}
+                >
+                  {t("send")}{" "}
+                  {loading ? (
+                    <i className="fa-duotone fa-regular fa-circle-notch fa-spin"></i>
+                  ) : null}
+                </button>
               </form>
             </div>
           </div>
