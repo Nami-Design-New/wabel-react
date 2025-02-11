@@ -64,12 +64,6 @@ export default function RootLayout() {
         }
       }, 200);
     }
-
-    if (location !== "/" || location !== "") {
-      document.querySelector("main").classList.add("not_home");
-    } else {
-      document.querySelector("main").classList.remove("not_home");
-    }
   }, [location]);
 
   return (

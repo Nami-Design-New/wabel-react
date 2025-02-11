@@ -141,8 +141,6 @@ body {
 body header {
   width: 100%;
   z-index: 1000;
-  position: fixed;
-  top: 0;
 }
 body header .top_bar {
   width: 100%;
@@ -430,9 +428,6 @@ body main {
 body main.main_fixed {
   margin-top: 118px;
 }
-body main.not_home {
-  margin-top: 118px;
-}
 body main .hero_section {
   padding: 40px 0;
   background: url("../images/header2.png");
@@ -440,8 +435,7 @@ body main .hero_section {
   background-position: center;
   position: relative;
   height: 100dvh;
-  max-height: 750px;
-  padding-top: 160px;
+  max-height: 650px;
 }
 @media screen and (max-width: 576px) {
   body main .hero_section {
