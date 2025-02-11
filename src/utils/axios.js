@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosInstance = axios.create({
-  baseURL: "https://wblnjd.zeroonez.com/api/",
+  baseURL: "https://api.wabelnajd.com.sa/api/",
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",
