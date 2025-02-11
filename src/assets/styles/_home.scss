@@ -1110,3 +1110,125 @@ form {
     border-radius: 12px;
   }
 }
+
+.team_section {
+  padding: 60px 0;
+
+  .title {
+    color: $main;
+    text-align: center;
+    font-size: 25px;
+    line-height: 40px;
+    margin-bottom: 0;
+  }
+
+  .desc {
+    width: min(100% - 24px, 600px);
+    margin: 0 auto 24px;
+    text-align: center;
+  }
+
+  .swiper {
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 60px;
+    .swiper-slide {
+      @include centerFlex();
+      height: auto;
+    }
+  }
+}
+
+.swiper-pagination {
+  padding: 40px 0 16px;
+  @include centerFlex();
+  gap: 4px;
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 0;
+    border: 1px solid $gray;
+    background: none;
+    border-radius: 50%;
+    &.swiper-pagination-bullet-active {
+      border-color: $main;
+      position: relative;
+      &::after {
+        content: "";
+        @include centerAbsolute();
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: $main;
+      }
+    }
+  }
+}
+
+.testimonial_card {
+  width: 100%;
+  border: 1px solid $stroke;
+  padding: 24px 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 32px;
+  position: relative;
+  img {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    width: 100px;
+    height: 100px;
+    filter: grayscale(1);
+    z-index: -1;
+  }
+  .rate {
+    ul {
+      display: flex;
+      gap: 4px;
+      li {
+        font-size: 16px;
+        i {
+          color: #ffca40 !important;
+        }
+      }
+    }
+  }
+  .opinion {
+    font-size: 14px;
+    font-style: italic;
+    line-height: 22px;
+    color: $main;
+  }
+  .owner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .img {
+      img {
+        position: static;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+    h6 {
+      color: $main;
+      font-size: 16px;
+      font-weight: 600;
+      margin: 0;
+    }
+    a {
+      color: $main;
+      font-size: 14px;
+    }
+    span {
+      color: $main;
+      font-size: 12px;
+    }
+  }
+}

@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Modal } from "react-bootstrap";
 import { useTranslation } from "react-i18next";
 import { useGetWhatYouNeed } from "../hooks/useGetWhatYouNeed";
+import { useGetIdeaDetails } from "../hooks/UseGetIdeaDetails";
 import { toast } from "sonner";
-import { useGetIdeaDetails } from "../hooks/useGetIdeaDetails";
 import { InputField } from "./InputField";
 import axiosInstance from "../utils/axios";
 

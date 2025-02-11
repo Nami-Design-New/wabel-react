@@ -35,7 +35,7 @@
 }
 
 ::-webkit-scrollbar {
-  width: 2px;
+  width: 4px;
 }
 
 ::-webkit-scrollbar-track {
@@ -1554,6 +1554,126 @@ body .idea span {
   align-items: center;
   justify-content: center;
   border-radius: 12px;
+}
+body .team_section {
+  padding: 60px 0;
+}
+body .team_section .title {
+  color: #231f20;
+  text-align: center;
+  font-size: 25px;
+  line-height: 40px;
+  margin-bottom: 0;
+}
+body .team_section .desc {
+  width: min(100% - 24px, 600px);
+  margin: 0 auto 24px;
+  text-align: center;
+}
+body .team_section .swiper {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 60px;
+}
+body .team_section .swiper .swiper-slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+}
+body .swiper-pagination {
+  padding: 40px 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+}
+body .swiper-pagination .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  border-radius: 0;
+  border: 1px solid #777;
+  background: none;
+  border-radius: 50%;
+}
+body .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  border-color: #231f20;
+  position: relative;
+}
+body .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: #231f20;
+}
+body .testimonial_card {
+  width: 100%;
+  border: 1px solid #f4f4f4;
+  padding: 24px 16px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  gap: 32px;
+  position: relative;
+}
+body .testimonial_card img {
+  position: absolute;
+  left: 16px;
+  top: 16px;
+  width: 100px;
+  height: 100px;
+  filter: grayscale(1);
+  z-index: -1;
+}
+body .testimonial_card .rate ul {
+  display: flex;
+  gap: 4px;
+}
+body .testimonial_card .rate ul li {
+  font-size: 16px;
+}
+body .testimonial_card .rate ul li i {
+  color: #ffca40 !important;
+}
+body .testimonial_card .opinion {
+  font-size: 14px;
+  font-style: italic;
+  line-height: 22px;
+  color: #231f20;
+}
+body .testimonial_card .owner {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+body .testimonial_card .owner .img img {
+  position: static;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .testimonial_card .owner h6 {
+  color: #231f20;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+}
+body .testimonial_card .owner a {
+  color: #231f20;
+  font-size: 14px;
+}
+body .testimonial_card .owner span {
+  color: #231f20;
+  font-size: 12px;
 }
 body .project_card {
   width: 100%;
