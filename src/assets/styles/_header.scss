@@ -1,8 +1,8 @@
 header {
   width: 100%;
   z-index: 1000;
-  background: $white;
-  border-bottom: 1px solid $stroke;
+  position: fixed;
+  top: 0;
 
   .top_bar {
     width: 100%;
@@ -158,6 +158,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
+    background: $white;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     animation: 0.5s ease-in-out 0s normal none 1 running fadeInDown;
     .top_bar {

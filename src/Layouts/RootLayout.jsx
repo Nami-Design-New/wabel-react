@@ -51,6 +51,25 @@ export default function RootLayout() {
 
   useEffect(() => {
     setTimeout(() => AOS.refresh(), 100);
+    window.scrollTo(0, 0);
+
+    if (location.hash) {
+      setTimeout(() => {
+        const element = document.querySelector(location.hash);
+        if (element) {
+          element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          });
+        }
+      }, 200);
+    }
+
+    if (location !== "/" || location !== "") {
+      document.querySelector("main").classList.add("not_home");
+    } else {
+      document.querySelector("main").classList.remove("not_home");
+    }
   }, [location]);
 
   return (

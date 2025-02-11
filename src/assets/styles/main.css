@@ -141,8 +141,8 @@ body {
 body header {
   width: 100%;
   z-index: 1000;
-  background: #fff;
-  border-bottom: 1px solid #f4f4f4;
+  position: fixed;
+  top: 0;
 }
 body header .top_bar {
   width: 100%;
@@ -309,6 +309,7 @@ body header.sticky {
   position: fixed;
   top: 0;
   left: 0;
+  background: #fff;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   animation: 0.5s ease-in-out 0s normal none 1 running fadeInDown;
 }
@@ -429,14 +430,18 @@ body main {
 body main.main_fixed {
   margin-top: 118px;
 }
+body main.not_home {
+  margin-top: 118px;
+}
 body main .hero_section {
   padding: 40px 0;
   background: url("../images/header2.png");
   background-size: cover;
   background-position: center;
   position: relative;
-  height: calc(100dvh - 118px);
-  max-height: 650px;
+  height: 100dvh;
+  max-height: 750px;
+  padding-top: 160px;
 }
 @media screen and (max-width: 576px) {
   body main .hero_section {
