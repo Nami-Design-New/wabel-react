@@ -8,8 +8,8 @@ const TeamMembers = () => {
   return (
     <section className="team">
       <div className="container">
-        <h3>أعضاء الفريق</h3>
-        <p>
+        <h3 data-aos="fade-right">أعضاء الفريق</h3>
+        <p data-aos="fade-left">
           الخدمات هي عروض احترافية تقدمها الشركات لتلبية احتياجات محددة أو لحل
           المشكلات لعملائها.
         </p>
