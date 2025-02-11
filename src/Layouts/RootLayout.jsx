@@ -37,12 +37,12 @@ export default function RootLayout() {
     sections.forEach((section) => {
       const sectionDivs = section.querySelectorAll("[data-aos]");
       sectionDivs.forEach((div, index) => {
-        div.setAttribute("data-aos-delay", (index + 1) * 100);
+        div.setAttribute("data-aos-delay", (index + 1) * 150);
       });
     });
 
     AOS.init({
-      offset: 20,
+      offset: 100,
       delay: 50,
       duration: 700,
       easing: "ease-out-cubic",

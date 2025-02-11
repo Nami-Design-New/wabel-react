@@ -6,7 +6,7 @@ export default function ServiceCard({ service, gradient }) {
   return (
     <div
       className="service_card"
-      data-aos="fade-up"
+      data-aos="flip-left"
       style={{
         backgroundImage: `${gradient}, url(${service.image})`,
       }}

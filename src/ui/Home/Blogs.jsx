@@ -41,7 +41,7 @@ export default function Blogs() {
                 }}
               >
                 {blogs?.map((blog) => (
-                  <SwiperSlide key={blog.id} data-aos="fade-up">
+                  <SwiperSlide key={blog.id} data-aos="flip-up">
                     <BlogCard blog={blog} />
                   </SwiperSlide>
                 ))}

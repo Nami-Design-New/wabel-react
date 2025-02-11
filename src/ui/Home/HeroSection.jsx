@@ -12,9 +12,9 @@ export default function HeroSection() {
         <div className="row">
           <div className="col-lg-6 col-12 p-2">
             <div className="content">
-              <h6 data-aos="fade-up">{t("wabelNajd")}</h6>
-              <h1 data-aos="fade-up">{t("heroTitle")}</h1>
-              <p data-aos="fade-up">{t("heroDescription")}</p>
+              <h6 data-aos="flip-up">{t("wabelNajd")}</h6>
+              <h1 data-aos="flip-right">{t("heroTitle")}</h1>
+              <p data-aos="zoom-in">{t("heroDescription")}</p>
               <div className="buttons" data-aos="fade-up">
                 <Link to="/contact">{t("contact")}</Link>
                 <Link to="/portfolio">{t("viewProjects")}</Link>

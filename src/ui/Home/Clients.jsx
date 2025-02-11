@@ -34,7 +34,7 @@ export default function Clients() {
             >
               {clients?.map((client) => (
                 <SwiperSlide key={client?.id}>
-                  <div className="logo" data-aos="fade-up">
+                  <div className="logo" data-aos="flip-left">
                     <img src={client?.image} loading="lazy" alt="" />
                   </div>
                 </SwiperSlide>

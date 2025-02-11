@@ -5,7 +5,7 @@ export default function ProjectCard({ project }) {
     <Link
       to={`/project-details/${project?.id}`}
       className="project_card"
-      data-aos="fade-up"
+      data-aos="flip-up"
     >
       <div className="img">
         <div className="link">

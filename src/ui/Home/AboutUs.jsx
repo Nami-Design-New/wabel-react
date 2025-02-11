@@ -38,11 +38,11 @@ export default function AboutUs() {
         <div className="row">
           <div className="col-lg-6 col-12 p-2">
             <div className="content">
-              <h6 data-aos="fade-up">{t("aboutSectionSubTitle")}</h6>
-              <h2 data-aos="fade-up">{t("aboutSectionTitle")}</h2>
-              <p data-aos="fade-up">{t("aboutSectionDesc")}</p>
+              <h6 data-aos="zoom-in-up">{t("aboutSectionSubTitle")}</h6>
+              <h2 data-aos="zoom-in-up">{t("aboutSectionTitle")}</h2>
+              <p data-aos="zoom-in-up">{t("aboutSectionDesc")}</p>
 
-              <div className="about_footer" data-aos="fade-up">
+              <div className="about_footer" data-aos="zoom-in-up">
                 <div className="r_list">
                   <ul>
                     {services?.map((service) => (
@@ -82,7 +82,7 @@ export default function AboutUs() {
             </div>
           </div>
           <div className="col-lg-6 col-12 p-2">
-            <div className="about_imgs" data-aos="zoom-in">
+            <div className="about_imgs" data-aos="zoom-in-right">
               <div className="img">
                 <img src="/images/about1.jpg" alt="about" />
               </div>
