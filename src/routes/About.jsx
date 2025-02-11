@@ -1,18 +1,13 @@
 import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { skills } from "../utils/data";
-import { Autoplay, Pagination } from "swiper/modules";
-import { useSelector } from "react-redux";
-import { useGetRates } from "../hooks/useGetRates";
 import CountUp from "react-countup";
 import Faqs from "./../ui/Home/Faqs";
+import Skills from "./../ui/Skills";
+import Testimonials from "../ui/Testimonials";
 
 export default function About() {
   const { t } = useTranslation();
-  const { lang } = useSelector((state) => state.language);
-  const { testimonials } = useGetRates();
   const sectionRef = useRef();
 
   const [startCount, setStartCount] = useState(false);
@@ -127,100 +122,9 @@ export default function About() {
         </div>
       </section>
 
-      <section className="team_section">
-        <div className="container">
-          <Swiper
-            modules={[Pagination, Autoplay]}
-            loop={true}
-            spaceBetween={30}
-            speed={1000}
-            centeredSlides={true}
-            pagination={{ clickable: true }}
-            autoplay={{ delay: 2500 }}
-            breakpoints={{
-              992: { slidesPerView: 3 },
-              768: { slidesPerView: 2 },
-              350: { slidesPerView: 1 },
-            }}
-            className="swiper testimonialsSwiper"
-          >
-            {testimonials?.map((testimonial, index) => (
-              <SwiperSlide key={index}>
-                <div className="testimonial_card">
-                  <img
-                    src="/images/left-quotes.svg"
-                    alt="quotes"
-                    loading="lazy"
-                  />
-                  <div className="d-flex flex-column gap-2">
-                    <div className="rate">
-                      <ul>
-                        {[...Array(5)].map((_, i) => (
-                          <li key={i}>
-                            <i className="fa-sharp fa-solid fa-star"></i>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                    <p className="opinion">{testimonial?.comment}</p>
-                  </div>
-                  <div className="owner">
-                    <div className="d-flex gap-3 align-items-center">
-                      <div className="img">
-                        <img src={testimonial?.image} alt={testimonial?.name} />
-                      </div>
-                      <h6>{testimonial.name}</h6>
-                    </div>
-                    <span>{testimonial.date}</span>
-                  </div>
-                </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      </section>
-
+      <Testimonials/>
       <Faqs />
-
-      <section className="skills_section">
-        <Swiper
-          slidesPerView={7}
-          spaceBetween={16}
-          speed={5000}
-          className="skills_slider"
-          loop={true}
-          modules={[Autoplay]}
-          dir={lang === "ar" ? "rtl" : "ltr"}
-          rtl={lang === "ar"}
-          key={lang}
-          autoplay={{
-            delay: 0,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            992: {
-              slidesPerView: 7,
-            },
-            768: {
-              slidesPerView: 4,
-            },
-            350: {
-              slidesPerView: 2,
-            },
-            0: {
-              slidesPerView: 2,
-            },
-          }}
-        >
-          {skills?.map((skill, index) => (
-            <SwiperSlide key={index}>
-              <div className="img">
-                <img src={skill} alt={`skill ${index}`} />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </section>
+      <Skills />
     </>
   );
 }

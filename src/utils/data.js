@@ -155,7 +155,7 @@ export const gradiants = [
   "linear-gradient(135deg, rgba(220, 53, 70, 0.826) 0%, rgba(155, 0, 0, 0.806) 100%)",
 ];
 
-export const skills = [
+export const skillsList = [
   "/images/partner/Adobe_XD.png",
   "/images/partner/Android.png",
   "/images/partner/Apple.png",

@@ -1081,14 +1081,12 @@ form {
       font-weight: 600;
     }
   }
-
-  .ideas {
-    display: grid;
-    gap: 16px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  }
 }
-
+.ideas {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
 .idea {
   width: 100%;
   input {
@@ -1230,5 +1228,85 @@ form {
       color: $main;
       font-size: 12px;
     }
+  }
+}
+
+.team {
+  padding: 60px 0;
+  h3 {
+    text-align: center;
+    color: $main;
+    font-size: 40px;
+  }
+  p {
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    width: min(100%, 700px);
+    color: #777777;
+    margin: 0 auto 40px;
+  }
+}
+
+.team-member {
+  width: 100%;
+  border: 1px solid #eeeeee;
+  padding: 16px;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+  &:hover {
+    border-color: transparent;
+
+    transform: translateY(-16px);
+    .img .social-media {
+      height: 200px;
+    }
+  }
+  .img {
+    width: 100%;
+    border-radius: 4px;
+    overflow: hidden;
+    position: relative;
+    img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+    }
+    .social-media {
+      transition: 0.3 ease-in-out;
+      position: absolute;
+      top: 8px;
+      left: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      height: 0;
+      overflow: hidden;
+      a {
+        width: 30px;
+        height: 30px;
+        border-radius: 4px;
+        @include centerFlex();
+        transition: 0.3s ease-in-out;
+        backdrop-filter: blur(16px) saturate(180%);
+        background-color: rgba(255, 255, 255, 0.1);
+        i {
+          font-size: 14px;
+          color: $main;
+        }
+      }
+    }
+  }
+  h6 {
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    font-weight: 700;
+    margin-top: 16px;
+    margin-bottom: 0px;
+  }
+  p {
+    font-size: 14px;
+    margin: 0;
   }
 }

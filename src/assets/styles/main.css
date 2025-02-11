@@ -1526,7 +1526,7 @@ body .request_service_modal form .title span {
   font-size: 24px;
   font-weight: 600;
 }
-body .request_service_modal form .ideas {
+body .ideas {
   display: grid;
   gap: 16px;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1674,6 +1674,87 @@ body .testimonial_card .owner a {
 body .testimonial_card .owner span {
   color: #231f20;
   font-size: 12px;
+}
+body .team {
+  padding: 60px 0;
+}
+body .team h3 {
+  text-align: center;
+  color: #231f20;
+  font-size: 40px;
+}
+body .team p {
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  width: min(100%, 700px);
+  color: #777777;
+  margin: 0 auto 40px;
+}
+body .team-member {
+  width: 100%;
+  border: 1px solid #eeeeee;
+  padding: 16px;
+  border-radius: 4px;
+  transition: 0.3s ease-in-out;
+}
+body .team-member:hover {
+  border-color: transparent;
+  transform: translateY(-16px);
+}
+body .team-member:hover .img .social-media {
+  height: 200px;
+}
+body .team-member .img {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+body .team-member .img img {
+  width: 100%;
+  aspect-ratio: 1/1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .team-member .img .social-media {
+  transition: 0.3 ease-in-out;
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  height: 0;
+  overflow: hidden;
+}
+body .team-member .img .social-media a {
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease-in-out;
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+          backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+body .team-member .img .social-media a i {
+  font-size: 14px;
+  color: #231f20;
+}
+body .team-member h6 {
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  font-weight: 700;
+  margin-top: 16px;
+  margin-bottom: 0px;
+}
+body .team-member p {
+  font-size: 14px;
+  margin: 0;
 }
 body .project_card {
   width: 100%;
