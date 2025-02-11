@@ -46,6 +46,7 @@ export default function RootLayout() {
       delay: 50,
       duration: 700,
       easing: "ease-out-cubic",
+      once: true,
     });
   }, []);
 
