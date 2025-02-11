@@ -2,10 +2,13 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { toast } from "sonner";
 import { useGetServices } from "../hooks/services/useGetServices";
+import { useGetSettings } from "./../hooks/useGetSettings";
 import axiosInstance from "../utils/axios";
+import { Link } from "react-router-dom";
 
 export default function ContactUs() {
   const { services } = useGetServices();
+  const { settings } = useGetSettings();
   const [loading, setLoading] = useState();
   const [formData, setFormData] = useState({
     name: "",
@@ -43,8 +46,7 @@ export default function ContactUs() {
                 <div className="blocks">
                   <div className="block">
                     <h6>{t("callCenter")}</h6>
-                    <a href="tel:+966558100108">+966 558 100 108</a>
-                    {/* <a href="tel:+966558100108">+966 558 100 108</a> */}
+                    <a href={`tel:${settings?.phone}`}>{settings?.phone}</a>
                   </div>
                   <div className="block">
                     <h6>{t("ourLocation")}</h6>
@@ -52,34 +54,44 @@ export default function ContactUs() {
                       href="https://www.google.com/maps/place/King+Abdullah+Park/@24.6474709,46.7602933,12387m/data=!3m1!1e3!4m6!3m5!1s0x3e2f043b45575437:0xa2bebdcec14359bd!8m2!3d24.6663657!4d46.7371594!16s%2Fg%2F11c76mxsyk?entry=ttu&amp;g_ep=EgoyMDI0MTExMC4wIKXMDSoASAFQAw%3D%3D"
                       target="_blank"
                     >
-                      السعوديه نجد اﻟﺪور اﻟﺮاﺑﻊ .مكتب رقم 26
+                      {settings?.address}
                     </a>
                   </div>
                   <div className="block">
                     <h6>{t("email")}</h6>
-                    <a href="mailto:info@wabel-najd.com">info@wabel-najd.com</a>
+                    <a href={`mailto:${settings?.email}`}>{settings?.email}</a>
                   </div>
                   <div className="block">
                     <h6>{t("socialMedia")}</h6>
                     <div className="socials">
-                      <a href="https://www.facebook.com/" target="_blank">
-                        <i className="fa-brands fa-facebook-f"></i>
-                      </a>
-                      <a href="https://www.linkedin.com/" target="_blank">
-                        <i className="fa-brands fa-linkedin-in"></i>
-                      </a>
-                      <a href="https://www.instagram.com/" target="_blank">
-                        <i className="fa-brands fa-instagram"></i>
-                      </a>
-                      <a href="https://twitter.com/" target="_blank">
-                        <i className="fa-brands fa-twitter"></i>
-                      </a>
-                      <a
-                        href="https://www.behance.net/wabelnajd"
+                      <Link
+                        to={settings?.facebook}
                         target="_blank"
+                        rel="noopener noreferrer"
                       >
-                        <i className="fa-brands fa-behance"></i>
-                      </a>
+                        <i className="fa-brands fa-facebook-f"></i>
+                      </Link>
+                      <Link
+                        to={settings?.insta}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fa-brands fa-instagram"></i>
+                      </Link>
+                      <Link
+                        to={settings?.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fa-brands fa-linkedin-in"></i>
+                      </Link>
+                      <Link
+                        to={settings?.twitter}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <i className="fa-brands fa-twitter"></i>
+                      </Link>
                     </div>
                   </div>
                 </div>
