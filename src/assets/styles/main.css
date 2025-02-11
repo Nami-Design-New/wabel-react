@@ -436,6 +436,7 @@ body main .hero_section {
   background-position: center;
   position: relative;
   height: calc(100dvh - 118px);
+  max-height: 650px;
 }
 @media screen and (max-width: 576px) {
   body main .hero_section {
@@ -721,14 +722,17 @@ body main .about_us_section .content .about_footer .statistics ul li p {
 body main .our_services {
   padding: 60px 0;
   background: #fafafa;
+  background: linear-gradient(180deg, rgba(108, 60, 134, 0.8078431373), rgba(108, 60, 134, 0.8862745098)), url("/public/images/bg-fixed1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 body main .our_services h2 {
   text-align: center;
-  color: #231f20;
+  color: #fff;
 }
 body main .our_services p {
   text-align: center;
-  color: #777;
+  color: #fff;
   width: min(800px, 100%);
   margin: 0 auto;
 }
@@ -888,14 +892,17 @@ body main .faqs_section .accordion .accordion-item .accordion-body p {
 }
 body main .blogs_section {
   padding: 60px 0;
+  background: linear-gradient(180deg, rgba(108, 60, 134, 0.8078431373), rgba(108, 60, 134, 0.8862745098)), url("/public/images/bg-fixed2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
 }
 body main .blogs_section h2 {
   text-align: center;
-  color: #231f20;
+  color: #fff;
 }
 body main .blogs_section p {
   text-align: center;
-  color: #777;
+  color: #fff;
   width: min(800px, 100%);
   margin: 0 auto;
 }
@@ -1619,6 +1626,7 @@ body .blog_card {
   padding: 16px;
   border-radius: 16px;
   border: 1px solid #f4f4f4;
+  background: #fff;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -1656,6 +1664,7 @@ body .blog_card .content p {
   margin: 0;
   -webkit-box-orient: vertical;
   overflow-y: hidden;
+  color: #231f20;
 }
 body .blog_card .content a {
   color: #231f20;

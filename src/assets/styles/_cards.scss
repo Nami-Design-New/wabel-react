@@ -113,6 +113,7 @@
   padding: 16px;
   border-radius: 16px;
   border: 1px solid $stroke;
+  background: $white;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -140,6 +141,7 @@
     display: flex;
     flex-direction: column;
     gap: 4px;
+
     p {
       text-align: start;
       display: -webkit-box;
@@ -147,6 +149,7 @@
       margin: 0;
       -webkit-box-orient: vertical;
       overflow-y: hidden;
+      color: $main;
     }
     a {
       color: $main;

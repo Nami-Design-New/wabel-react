@@ -1,5 +1,6 @@
 main {
   min-height: calc(100vh - 400px);
+
   &.main_fixed {
     margin-top: 118px;
   }
@@ -11,6 +12,7 @@ main {
     background-position: center;
     position: relative;
     height: calc(100dvh - 118px);
+    max-height: 650px;
     @media screen and (max-width: 576px) {
       height: auto;
     }
@@ -284,13 +286,17 @@ main {
   .our_services {
     padding: 60px 0;
     background: $lightbg;
+    background: linear-gradient(180deg, #6c3c86ce, #6c3c86e2),
+      url("/public/images/bg-fixed1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
     h2 {
       text-align: center;
-      color: $main;
+      color: $white;
     }
     p {
       text-align: center;
-      color: $gray;
+      color: $white;
       width: min(800px, 100%);
       margin: 0 auto;
     }
@@ -449,13 +455,17 @@ main {
 
   .blogs_section {
     padding: 60px 0;
+    background: linear-gradient(180deg, #6c3c86ce, #6c3c86e2),
+      url("/public/images/bg-fixed2.jpg");
+      background-size: cover;
+      background-attachment: fixed;
     h2 {
       text-align: center;
-      color: $main;
+      color: $white;
     }
     p {
       text-align: center;
-      color: $gray;
+      color: $white;
       width: min(800px, 100%);
       margin: 0 auto;
     }
