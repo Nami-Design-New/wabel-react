@@ -16,7 +16,7 @@ export default function ServiceCard({ service, gradient }) {
       </div>
       <h3>{service?.title}</h3>
       <p>{service?.description}</p>
-      <Link to={`/service-details/${service?.id}`}>
+      <Link to={`/services/${service?.id}`}>
         {t("learnMore")} <i className="fa-regular fa-angle-left"></i>
       </Link>
     </div>

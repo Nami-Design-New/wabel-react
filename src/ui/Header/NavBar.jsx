@@ -57,7 +57,7 @@ export default function NavBar() {
           </NavLink>
         </li>
         <li>
-          <Link to="/#services" onClick={closeMenu}>
+          <Link to="/services" onClick={closeMenu}>
             {t("services")}
           </Link>
         </li>
@@ -67,7 +67,7 @@ export default function NavBar() {
           </NavLink>
         </li>
         <li>
-          <Link to="/#blogs" onClick={closeMenu}>
+          <Link to="/blogs" onClick={closeMenu}>
             {t("blogs")}
           </Link>
         </li>

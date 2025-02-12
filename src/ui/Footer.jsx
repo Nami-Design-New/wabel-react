@@ -26,7 +26,7 @@ export default function Footer() {
               <ul>
                 {services?.map((service) => (
                   <li key={service.id}>
-                    <Link to={`/service-details/${service.id}`}>
+                    <Link to={`/services/${service.id}`}>
                       {service.title}
                     </Link>
                   </li>

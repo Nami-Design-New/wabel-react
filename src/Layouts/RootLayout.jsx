@@ -53,18 +53,6 @@ export default function RootLayout() {
   useEffect(() => {
     setTimeout(() => AOS.refresh(), 100);
     window.scrollTo(0, 0);
-
-    if (location.hash) {
-      setTimeout(() => {
-        const element = document.querySelector(location.hash);
-        if (element) {
-          element.scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-        }
-      }, 200);
-    }
   }, [location]);
 
   return (

@@ -300,37 +300,6 @@ main {
       width: min(800px, 100%);
       margin: 0 auto;
     }
-    .service_card {
-      padding: 48px 32px;
-      height: 340px;
-      border-radius: 16px;
-      overflow: hidden;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      background-size: cover;
-      h3 {
-        color: $white;
-        font-size: 24px;
-      }
-      p {
-        color: $white;
-        text-align: start;
-        font-size: 14px;
-        display: -webkit-box;
-        -webkit-line-clamp: 3;
-        -webkit-box-orient: vertical;
-        overflow-y: hidden;
-      }
-      a {
-        color: $white;
-      }
-      img {
-        height: 48px;
-        margin-bottom: 12px;
-      }
-    }
   }
 
   .best_projects {
@@ -1310,5 +1279,57 @@ form {
   p {
     font-size: 14px;
     margin: 0;
+  }
+}
+
+.blogs_page,
+.service_page {
+  padding: 60px 0;
+}
+
+.page_header {
+  padding: 48px 0;
+  background: linear-gradient(180deg, #6c3c86ce, #6c3c86e2),
+    url("/images/bg-fixed1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  h2,
+  p {
+    color: $white;
+  }
+  p {
+    margin: 0;
+  }
+}
+
+.service_card {
+  padding: 48px 32px;
+  height: 340px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-size: cover;
+  h3 {
+    color: $white;
+    font-size: 24px;
+  }
+  p {
+    color: $white;
+    text-align: start;
+    font-size: 14px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow-y: hidden;
+  }
+  a {
+    color: $white;
+  }
+  img {
+    height: 48px;
+    margin-bottom: 12px;
   }
 }

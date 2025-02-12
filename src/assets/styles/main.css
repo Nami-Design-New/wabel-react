@@ -745,37 +745,6 @@ body main .our_services p {
   width: min(800px, 100%);
   margin: 0 auto;
 }
-body main .our_services .service_card {
-  padding: 48px 32px;
-  height: 340px;
-  border-radius: 16px;
-  overflow: hidden;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  background-size: cover;
-}
-body main .our_services .service_card h3 {
-  color: #fff;
-  font-size: 24px;
-}
-body main .our_services .service_card p {
-  color: #fff;
-  text-align: start;
-  font-size: 14px;
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow-y: hidden;
-}
-body main .our_services .service_card a {
-  color: #fff;
-}
-body main .our_services .service_card img {
-  height: 48px;
-  margin-bottom: 12px;
-}
 body main .best_projects {
   padding: 60px 0;
 }
@@ -1767,6 +1736,54 @@ body .team-member h6 {
 body .team-member p {
   font-size: 14px;
   margin: 0;
+}
+body .blogs_page,
+body .service_page {
+  padding: 60px 0;
+}
+body .page_header {
+  padding: 48px 0;
+  background: linear-gradient(180deg, rgba(108, 60, 134, 0.8078431373), rgba(108, 60, 134, 0.8862745098)), url("/images/bg-fixed1.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+body .page_header h2,
+body .page_header p {
+  color: #fff;
+}
+body .page_header p {
+  margin: 0;
+}
+body .service_card {
+  padding: 48px 32px;
+  height: 340px;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-size: cover;
+}
+body .service_card h3 {
+  color: #fff;
+  font-size: 24px;
+}
+body .service_card p {
+  color: #fff;
+  text-align: start;
+  font-size: 14px;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow-y: hidden;
+}
+body .service_card a {
+  color: #fff;
+}
+body .service_card img {
+  height: 48px;
+  margin-bottom: 12px;
 }
 body .project_card {
   width: 100%;

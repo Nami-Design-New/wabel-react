@@ -7,6 +7,8 @@ import ContactUs from "../routes/ContactUs";
 import ServiceDetails from "../routes/ServiceDetails";
 import ProjectDetails from "../routes/ProjectDetails";
 import BlogDetails from "../routes/BlogDetails";
+import Blogs from "../routes/Blogs";
+import Services from "../routes/Services";
 
 export const router = createBrowserRouter([
   {
@@ -22,12 +24,30 @@ export const router = createBrowserRouter([
         element: <Portfolio />,
       },
       {
-        path: "service-details/:id",
-        element: <ServiceDetails />,
+        path: "services",
+        children: [
+          {
+            index: true,
+            element: <Services />,
+          },
+          {
+            path: ":id",
+            element: <ServiceDetails />,
+          },
+        ],
       },
       {
-        path: "blog-details/:id",
-        element: <BlogDetails />,
+        path: "blogs",
+        children: [
+          {
+            index: true,
+            element: <Blogs />,
+          },
+          {
+            path: ":id",
+            element: <BlogDetails />,
+          },
+        ],
       },
       {
         path: "project-details/:id",
