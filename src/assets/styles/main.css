@@ -124,6 +124,9 @@ textarea {
   margin-inline-end: 8px;
   border-radius: 100px;
 }
+.modal-header .back-button i {
+  transform: scale(-1);
+}
 
 .modal-content {
   background: #fff;
@@ -2027,6 +2030,9 @@ body.en main .contact_page .contact_info h2 {
 body.en footer .col_info h3::after {
   right: initial;
   left: 0;
+}
+body.en .modal-header .back-button i {
+  transform: scale(1);
 }
 
 .map {

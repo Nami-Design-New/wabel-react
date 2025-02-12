@@ -91,5 +91,7 @@
     "sar": "SAR",
     "suitable": "Suitable",
     "unSuitable": "Unsuitable",
-    "chooseProjectidea": "Choose a project idea"
+    "chooseProjectidea": "Choose a project idea",
+    "enterPhoneNumber": "Enter phone number",
+    "fillAllFields": "Fill all fields"
 }

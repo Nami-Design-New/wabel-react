@@ -125,6 +125,14 @@ export default function RequestServiceModal({ show, setShow }) {
     }
   };
 
+  const handleValidateAndNext = () => {
+    if (formData.type && formData.what_you_need_idea_id && selectedIdea) {
+      setStep(2);
+    } else {
+      toast.warning(t("fillAllFields"));
+    }
+  };
+
   return (
     <Modal
       centered
@@ -193,7 +201,11 @@ export default function RequestServiceModal({ show, setShow }) {
                 }))}
               />
 
-              <button type="button" className="btn" onClick={() => setStep(2)}>
+              <button
+                type="button"
+                className="btn"
+                onClick={handleValidateAndNext}
+              >
                 {t("next")}
               </button>
             </>

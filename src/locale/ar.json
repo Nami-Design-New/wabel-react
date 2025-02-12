@@ -91,5 +91,7 @@
     "sar": "ر.س",
     "suitable": "مناسب",
     "unSuitable":"غير مناسب",
-    "chooseProjectidea": "إختر فكره المشروع "
+    "chooseProjectidea": "إختر فكره المشروع ",
+    "enterPhoneNumber": "أدخل رقم الهاتف",
+    "fillAllFields": "املأ جميع الحقول"
 }

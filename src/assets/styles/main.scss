@@ -54,6 +54,10 @@ body {
       right: initial;
       left: 0;
     }
+
+    .modal-header .back-button i {
+      transform: scale(1);
+    }
   }
 }
 
