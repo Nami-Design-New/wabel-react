@@ -90,8 +90,14 @@
     "priceDesc": "ستكون التكلفة المبدأيه ل",
     "sar": "ر.س",
     "suitable": "مناسب",
-    "unSuitable":"غير مناسب",
+    "unSuitable": "غير مناسب",
     "chooseProjectidea": "إختر فكره المشروع ",
     "enterPhoneNumber": "أدخل رقم الهاتف",
-    "fillAllFields": "املأ جميع الحقول"
+    "fillAllFields": "املأ جميع الحقول",
+    "ourTeam": "وراء كل نجاح فريق مبدع",
+    "ourTeamSubTitle": "مجموعة من العقول المبدعة، نبتكر لنصنع المستقبل الرقمي",
+    "packagesTitle": "خططًا مناسبة لكل احتياجاتك لضمان تحقيق النجاح.",
+    "marketing": "التسويق",
+    "programing": "برمجة",
+    "getThePackage": "احصل على الباقة الان"
 }

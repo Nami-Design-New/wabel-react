@@ -6,6 +6,7 @@ import HeroSection from "../ui/Home/HeroSection";
 import OurProjects from "../ui/Home/OurProjects";
 import OurServices from "../ui/Home/OurServices";
 import TeamMembers from "../ui/TeamMembers";
+import Packages from "./../ui/Home/Packages";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
       <AboutUs />
       <TeamMembers />
       <OurServices />
+      <Packages />
       <OurProjects />
       <Faqs />
       <Blogs />

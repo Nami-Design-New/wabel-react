@@ -1,20 +1,18 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useTranslation } from "react-i18next";
 import { useGetStuff } from "../hooks/useGetStuff";
 import "swiper/css";
 import "swiper/css/pagination";
 
 const TeamMembers = () => {
+  const { t } = useTranslation();
   const { stuff } = useGetStuff();
   return (
     <section className="team">
       <div className="container">
-        <h3 data-aos="fade-right">أعضاء الفريق</h3>
-        <p data-aos="fade-left">
-          الخدمات هي عروض احترافية تقدمها الشركات لتلبية احتياجات محددة أو لحل
-          المشكلات لعملائها.
-        </p>
+        <h3 data-aos="fade-right">{t("ourTeam")}</h3>
+        <p data-aos="fade-left">{t("ourTeamSubTitle")}</p>
         <Swiper
-       
           spaceBetween={50}
           grabCursor={true}
           pagination={{ clickable: true }}
