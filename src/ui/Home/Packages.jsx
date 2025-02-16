@@ -29,11 +29,15 @@ function Packages() {
             {t("marketing")}
           </button>
         </div>
-        <div className="row">
+        <div className="row justify-content-center">
           {packages
             ?.filter((p) => p.type === packagesType)
             ?.map((item) => (
-              <div className="col-lg-4 col-12 p-2" key={item.id}>
+              <div
+                className="col-lg-4 col-12 p-2"
+                key={item.id}
+                data-aos="fade-up"
+              >
                 <div className="package_card">
                   <h5>{item.title}</h5>
                   <ul>

@@ -2034,14 +2034,6 @@ body .packages .btns button.h {
   color: #fff;
   background: #6c3c86;
 }
-body .packages .strip2 img {
-  position: absolute;
-  top: -20px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  opacity: 0.1;
-}
 body .packages h3 {
   text-align: center;
   font-size: 2rem;
@@ -2050,152 +2042,50 @@ body .packages h3 {
   color: #6c3c86;
   margin-bottom: 12px;
 }
-body .packages .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-body .package-card {
-  background: #231f20;
-  border-radius: 15px;
-  padding: 30px;
-  color: #fff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-body .package-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.3);
-}
-body .package-card .title {
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  text-align: center;
-}
-body .package-card .price {
-  font-size: 2rem;
-  color: #4caf50;
-  text-align: center;
-  margin-bottom: 10px;
-}
-body .package-card .duration {
-  font-size: 1rem;
-  color: #eee;
-  text-align: center;
-  margin-bottom: 20px;
-}
-body .package-card .packagesFeatures {
-  list-style: none;
-  padding: 0;
-}
-body .package-card .packagesFeatures li {
-  display: flex;
-  gap: 8px;
-  margin-bottom: 10px;
-  font-size: 1rem;
-}
-body .package-card .packagesFeatures li span {
-  flex: 1;
-}
-body .package-card .packagesFeatures .check {
-  color: #4caf50;
-  margin-right: 10px;
-}
-body .package-card .packagesFeatures .times {
-  color: #f44336;
-  margin-right: 10px;
-}
-body .table_container {
-  overflow: scroll;
-  padding-bottom: 8px;
-  width: 100%;
-}
-body .table_container::-webkit-scrollbar {
-  height: 6px;
-}
-body table {
-  white-space: nowrap;
-  width: 100%;
-  border: 1px solid #eee;
-  border-collapse: collapse;
-  border-radius: 16px;
-  position: relative;
-  background-color: rgba(15, 104, 182, 0.0588235294);
-  overflow: hidden;
-}
-body table th:nth-child(even),
-body table td:nth-child(even) {
-  background-color: #fff;
-}
-body table td,
-body table th {
-  padding: 8px 16px;
-  border: 1px solid #eee;
-  position: relative;
-  font-size: 14px;
-  white-space: normal;
-}
-body table td .icon,
-body table th .icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-body table td .check,
-body table th .check {
-  color: #6c3c86;
-}
-body table td .x,
-body table th .x {
-  color: #f02020;
-}
-body table td.circled,
-body table th.circled {
-  padding: 8px 24px;
-}
-body table td.circled:before,
-body table th.circled:before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 8px;
-  right: 8px;
-  height: 8px;
-  background: #6c3c86;
-  border-radius: 50%;
-}
 body .package_card {
   border: 1px solid #f4f4f4;
-  padding: 24px;
+  background: rgba(108, 60, 134, 0.1058823529);
   border-radius: 16px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  text-align: center;
+  transition: 0.3s ease-in-out;
+}
+body .package_card:hover {
+  background: #6c3c86;
+}
+body .package_card:hover ul li {
+  color: #fff;
 }
 body .package_card h5 {
-  color: #6c3c86;
+  color: #fff;
+  background: #6c3c86;
+  padding: 16px;
 }
 body .package_card a {
   background: #fafafa;
-  padding: 8px 32px;
+  padding: 8px 24px;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 40px;
   color: #6c3c86;
+  margin: 0 auto 16px;
+  transition: 0.3s ease-in-out;
 }
 body .package_card ul {
   display: flex;
   flex-direction: column;
   gap: 12px;
-  padding: 12px 0;
-  margin: 12px 0;
-  border-top: 1px solid #f4f4f4;
+  padding: 12px 16px;
+  margin: 0 0 12px;
   border-bottom: 1px solid #f4f4f4;
   margin-bottom: 16px;
 }
 body .package_card ul li {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
 }
 body .package_card ul li i {
