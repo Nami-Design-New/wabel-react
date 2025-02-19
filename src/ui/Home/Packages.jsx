@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
-import useGetPackages from "../../hooks/useGetPackages";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useGetPackages from "../../hooks/useGetPackages";
 
 function Packages() {
   const { data: packages } = useGetPackages();
@@ -9,7 +9,7 @@ function Packages() {
   const { t } = useTranslation();
 
   return (
-    <section className="packages">
+    <section className="packages" id="packages">
       <div className="container">
         <span className="strip2">
           <img src="/Rectangle-5-Copy-3.png" alt="" />

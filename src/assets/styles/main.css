@@ -1013,29 +1013,6 @@ body main .portfolio_page .portfolio_header .img {
 body main .portfolio_page .portfolio_header .img img {
   height: 200px;
 }
-body main .portfolio_page .filter {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin: 24px 0;
-}
-body main .portfolio_page .filter button {
-  padding: 4px 16px;
-  border-radius: 40px;
-  border: 1px solid #f4f4f4;
-  background: transparent;
-  color: #231f20;
-  transition: 0.3s ease-in-out;
-}
-body main .portfolio_page .filter button.active {
-  background: #231f20;
-  color: #fff;
-}
-body main .portfolio_page .filter button:hover {
-  background: #231f20;
-  color: #fff;
-}
 body main .about_section {
   padding: 60px 0 0;
 }
@@ -1784,6 +1761,29 @@ body .service_card a {
 body .service_card img {
   height: 48px;
   margin-bottom: 12px;
+}
+body .filter {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 24px 0;
+}
+body .filter button {
+  padding: 4px 16px;
+  border-radius: 40px;
+  border: 1px solid #f4f4f4;
+  background: transparent;
+  color: #231f20;
+  transition: 0.3s ease-in-out;
+}
+body .filter button.active {
+  background: #231f20;
+  color: #fff;
+}
+body .filter button:hover {
+  background: #231f20;
+  color: #fff;
 }
 body .project_card {
   width: 100%;

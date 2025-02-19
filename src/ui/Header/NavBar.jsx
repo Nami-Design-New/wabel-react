@@ -1,32 +1,26 @@
 import { useQueryClient } from "@tanstack/react-query";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setLanguage } from "../../redux/slices/language";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useGetSettings } from "../../hooks/useGetSettings";
+import { useGetCategories } from "../../hooks/projects/useGetCategories";
 import i18next from "i18next";
+import { Dropdown } from "react-bootstrap";
 
 export default function NavBar() {
-  const { hash } = useLocation();
   const { t } = useTranslation();
   const { settings } = useGetSettings();
+  const { categories } = useGetCategories();
+
   const { lang } = useSelector((state) => state.language);
+
   const queryClient = useQueryClient();
   const dispatch = useDispatch();
-  const [menuOpen, setMenuOpen] = useState(false);
 
-  useEffect(() => {
-    if (hash) {
-      const element = document.querySelector(hash);
-      if (element) {
-        element.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        });
-      }
-    }
-  }, [hash]);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleLang = (newLang) => {
     queryClient.invalidateQueries();
@@ -37,7 +31,6 @@ export default function NavBar() {
   };
 
   const toggleMenu = () => setMenuOpen((prev) => !prev);
-
   const closeMenu = () => setMenuOpen(false);
 
   return (
@@ -57,9 +50,43 @@ export default function NavBar() {
           </NavLink>
         </li>
         <li>
-          <Link to="/services" onClick={closeMenu}>
-            {t("services")}
-          </Link>
+          <Link to="/#packages">{t("packages")}</Link>
+        </li>
+
+        <li>
+          <Dropdown
+            onMouseEnter={() => setIsOpen(true)}
+            onMouseLeave={() => setIsOpen(false)}
+            show={isOpen}
+            style={{ position: "relative" }}
+          >
+            <Dropdown.Toggle
+              style={{
+                backgroundColor: "#fff",
+                outline: "none",
+                border: "none",
+                fontSize: "18px",
+                color: "#000",
+                padding: "0",
+              }}
+              id="dropdown-basic"
+            >
+              {t("services")}
+            </Dropdown.Toggle>
+            <Dropdown.Menu align="start">
+              <div className="scroll_menu">
+                {categories?.map((category) => (
+                  <Dropdown.Item
+                    key={category?.id}
+                    as={Link}
+                    to={`/services?category=${category?.name}`}
+                  >
+                    {category?.name}
+                  </Dropdown.Item>
+                ))}
+              </div>
+            </Dropdown.Menu>
+          </Dropdown>
         </li>
         <li>
           <NavLink to="/portfolio" onClick={closeMenu}>

@@ -1,8 +1,12 @@
 import axiosInstance from "../utils/axios";
 
-export async function getProjects() {
+export async function getProjects(category) {
   try {
-    const response = await axiosInstance.get("get_projects");
+    const response = await axiosInstance.get("get_projects", {
+      params: {
+        category,
+      },
+    });
     const data = response.data.data;
     return data;
   } catch (err) {
